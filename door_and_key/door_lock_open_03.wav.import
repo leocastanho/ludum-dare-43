@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/door_lock_open_03.wav-f85fa8b3fadac4f73c4e50dfcfb0b303.sample"
+
+[deps]
+
+source_file="res://door_and_key/door_lock_open_03.wav"
+dest_files=[ "res://.import/door_lock_open_03.wav-f85fa8b3fadac4f73c4e50dfcfb0b303.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

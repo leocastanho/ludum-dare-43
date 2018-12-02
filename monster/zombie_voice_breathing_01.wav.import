@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/zombie_voice_breathing_01.wav-18c86889d19880542704b5b8355054a7.sample"
+
+[deps]
+
+source_file="res://monster/zombie_voice_breathing_01.wav"
+dest_files=[ "res://.import/zombie_voice_breathing_01.wav-18c86889d19880542704b5b8355054a7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

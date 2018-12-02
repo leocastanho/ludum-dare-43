@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coin_bag_ring_gemstone_item_10.wav-cfe62f95f3b611aabed47fa20633e7ff.sample"
+
+[deps]
+
+source_file="res://door_and_key/coin_bag_ring_gemstone_item_10.wav"
+dest_files=[ "res://.import/coin_bag_ring_gemstone_item_10.wav-cfe62f95f3b611aabed47fa20633e7ff.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

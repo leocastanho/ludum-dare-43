@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/voice_male_breathing_mask_loop_jog_01.wav-3246d3e6c1a52c94c22d10034b24e66a.sample"
+
+[deps]
+
+source_file="res://player/voice_male_breathing_mask_loop_jog_01.wav"
+dest_files=[ "res://.import/voice_male_breathing_mask_loop_jog_01.wav-3246d3e6c1a52c94c22d10034b24e66a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

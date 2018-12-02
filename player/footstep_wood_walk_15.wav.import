@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/footstep_wood_walk_15.wav-329586fc22d438153f826c5d9b2aae4b.sample"
+
+[deps]
+
+source_file="res://player/footstep_wood_walk_15.wav"
+dest_files=[ "res://.import/footstep_wood_walk_15.wav-329586fc22d438153f826c5d9b2aae4b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

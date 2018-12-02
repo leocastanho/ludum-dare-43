@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/collectable_item_bonus_02.wav-18cbf696bfc388f1c2130285a63d3d5d.sample"
+
+[deps]
+
+source_file="res://door_and_key/collectable_item_bonus_02.wav"
+dest_files=[ "res://.import/collectable_item_bonus_02.wav-18cbf696bfc388f1c2130285a63d3d5d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
