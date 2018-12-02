@@ -5,6 +5,7 @@ const MAX_SPEED = 130
 const FRICTION = 0.15
 var motion = Vector2()
 
+
 #var disguise = 3
 #var max_diguise = 5
 #var normalPlayer = preload("res://GFX/PNG/Hitman 1/hitman1_stand.png")
@@ -109,7 +110,7 @@ func death():
 	set_physics_process(false)
 	$AnimatedSprite.play("die")
 	$PlayerBreathing.stop()
-	get_node("/root/BlindLevelModel/AudioStreamPlayer").play()
+	get_node("/root/Tutorial/AudioStreamPlayer").play()
 	yield($AnimatedSprite, "animation_finished")
 	$AnimatedSprite.stop()
 	yield(get_tree().create_timer(0.5), "timeout")

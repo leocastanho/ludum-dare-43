@@ -1,12 +1,42 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://tileset/paving_01_tile_256_07.png" type="Texture" id=1]
+[ext_resource path="res://tileset/paving_01_tile_256_06.png" type="Texture" id=2]
+[ext_resource path="res://tileset/paving_01_tile_256_03.png" type="Texture" id=3]
+[ext_resource path="res://tileset/paving_01_tile_256_09.png" type="Texture" id=4]
+[ext_resource path="res://tileset/paving_01_tile_256_11.png" type="Texture" id=5]
+[ext_resource path="res://tileset/pavig_01_tile_water_256_05.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite3" type="Sprite" parent="." index="2"]
+
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite4" type="Sprite" parent="." index="3"]
+
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite5" type="Sprite" parent="." index="4"]
+
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite6" type="Sprite" parent="." index="5"]
+
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 

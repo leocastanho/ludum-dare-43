@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=85 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://player/art/Idle_000.png" type="Texture" id=2]
@@ -98,15 +98,15 @@ animations = [ {
 "name": "walk_right",
 "speed": 23.0
 }, {
-"frames": [  ],
-"loop": true,
-"name": "hurt",
-"speed": 20.0
-}, {
 "frames": [ ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
 "loop": true,
 "name": "die",
 "speed": 23.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "hurt",
+"speed": 20.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -170,6 +170,68 @@ tracks/3/keys = {
 "values": [ true, false ]
 }
 
+[sub_resource type="Animation" id=4]
+
+resource_name = "flickering"
+length = 5.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyLight:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 1.7, 1.9, 2.2, 3, 4, 4.3, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.576471, 0.576471, 0.576471, 0.74902 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ), Color( 0.576471, 0.576471, 0.576471, 0.74902 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ), Color( 0.576471, 0.576471, 0.576471, 0.74902 ), Color( 0.576471, 0.576471, 0.576471, 0.74902 ), Color( 0, 0, 0, 1 ), Color( 0.576471, 0.576471, 0.576471, 0.74902 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FeetLight:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 1.7, 1.9, 2.2, 3, 4, 4.3, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.576471, 0.576471, 0.576471, 0.752588 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ), Color( 0.576471, 0.576471, 0.576471, 0.752588 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ), Color( 0.576471, 0.576471, 0.576471, 0.752588 ), Color( 0.576471, 0.576471, 0.576471, 0.752588 ), Color( 0, 0, 0, 1 ), Color( 0.576471, 0.576471, 0.576471, 0.752588 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ), Color( 0.576471, 0.576471, 0.576471, 0.396078 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "flickering_orange"
+length = 5.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyLight:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 1.7, 1.9, 2.2, 3, 4, 4.3, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.761719, 0.463472, 0.333252, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.761719, 0.463472, 0.333252, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.761719, 0.463472, 0.333252, 0.74902 ), Color( 0.761719, 0.463472, 0.333252, 0.74902 ), Color( 0, 0, 0, 1 ), Color( 0.761719, 0.463472, 0.333252, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("FeetLight:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 1.7, 1.9, 2.2, 3, 4, 4.3, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0, 0, 0, 1 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ) ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
@@ -185,7 +247,7 @@ position = Vector2( 0, 0.581135 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 18
+frame = 3
 playing = true
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
@@ -223,6 +285,7 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="BodyLight" type="Light2D" parent="." index="3"]
 
+modulate = Color( 0.576471, 0.576471, 0.576471, 0.396078 )
 position = Vector2( 0, -3.81161 )
 scale = Vector2( 0.55, 1.2 )
 enabled = true
@@ -230,7 +293,7 @@ editor_only = false
 texture = ExtResource( 77 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
-color = Color( 0.648438, 0.648438, 0.648438, 0.762902 )
+color = Color( 0.839216, 0.423529, 0.423529, 0.396078 )
 energy = 1.0
 mode = 0
 range_height = 0.0
@@ -250,6 +313,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="FeetLight" type="Light2D" parent="." index="4"]
 
+modulate = Color( 0.578125, 0.578125, 0.578125, 0.396902 )
 position = Vector2( 0.0814095, 24.8214 )
 scale = Vector2( 0.5, 0.3 )
 enabled = true
@@ -257,7 +321,7 @@ editor_only = false
 texture = ExtResource( 77 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
-color = Color( 0.648438, 0.648438, 0.648438, 0.762902 )
+color = Color( 0.839216, 0.423529, 0.423529, 0.396078 )
 energy = 1.0
 mode = 0
 range_height = 0.0
@@ -299,7 +363,7 @@ blend_times = [  ]
 stream = ExtResource( 79 )
 volume_db = -35.0
 pitch_scale = 1.0
-autoplay = true
+autoplay = false
 mix_target = 0
 bus = "Master"
 
@@ -311,5 +375,16 @@ pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
+
+[node name="TorchAnim" type="AnimationPlayer" parent="." index="9"]
+
+root_node = NodePath("..")
+autoplay = "flickering_orange"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/flickering = SubResource( 4 )
+anims/flickering_orange = SubResource( 5 )
+blend_times = [  ]
 
 

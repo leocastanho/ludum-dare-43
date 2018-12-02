@@ -104,7 +104,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
 animation = "idle_knight"
-frame = 4
+frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
