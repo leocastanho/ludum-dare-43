@@ -1,10 +1,33 @@
 [ 
     {"story":[""],
         
-    "tutorial":["ssssssssssssss","sadasdasdasdsa","asdasodasd"],
-
+    "tutorial":["Brave warrior, if you want to save us from the dark sun, you will have to learn how to see without your eyes.",
+        "I will teach you how to see with your ears.",
+        "Every little thing has a nature sound. But not everyone can hear it, this is an acient technique that have been long forgotten.",
+        "To hear it you need know their language. The language of things.",
+        "Those sheeps ahead will represent the monsters that you are going to face during your journey. Even i don't know how to kill those monsters.",
+        "I heard that there is a ancient word that you can say when you are close to them and they will die, maybe you will learn it on your journey.",
+        "To hear the sound of monsters, you must say 'kuons' (press enter) and if there is any close to you, they will emmit a sound, then you can dodge them.",
+        "Go ahead and try it with the sheeps, make them talk while you get closer, but dont touch them!",
+        "Every dungeon has a locked door, to open that door you need to find the key in the dark, but no worries, you can hear the sound of the key as well.",
+        "Always search for the key and the next door, those sounds will guide you. Remember",
+        "To hear the sound of the key you must say 'ieak' (press E) and it will emit a sound.",
+        "You must do the same for the door, say 'dualei' (press R) to hear the sound of the door.",
+        "Now lets try the real deal, no light! Good luck, heres a lighter to help you a little bit.",
+        "Well done, i think now you understand how hard your quest will be. This was just a little taste. It will be much harder out there.",
+        "Lets try one more time, this time, it will be a little bit harder. Good luck.",
+        "Okay, now i think you are ready. Go through that door, to enter in the dungeon.",
+        "From now one, there will be no more light. Good luck out there."],
     
-    "final":[""]},
+    "loosing_tutorial":["If you can't even pass through a couple of sheeps, you are going to die out there! Try again!"],
+
+    "level1":["I cant see a thing... But i can do it. Lets go",
+        "Okay, i passed the first area, dont panic. Keep calm.",
+        "One more door opened, why there are so many doors here?"],
+    
+    "loosing_normal":["You are dead! Try again!"],
+    
+    "final":["I think im guetting close to the sun. I can feel it."]},
 
 
     {"story":[""],

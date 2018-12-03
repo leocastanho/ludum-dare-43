@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://player/art/Idle_000.png" type="Texture" id=2]
@@ -61,24 +61,37 @@
 [ext_resource path="res://player/art/Walking_021.png" type="Texture" id=59]
 [ext_resource path="res://player/art/Walking_022.png" type="Texture" id=60]
 [ext_resource path="res://player/art/Walking_023.png" type="Texture" id=61]
-[ext_resource path="res://player/art/Dying_000.png" type="Texture" id=62]
-[ext_resource path="res://player/art/Dying_001.png" type="Texture" id=63]
-[ext_resource path="res://player/art/Dying_002.png" type="Texture" id=64]
-[ext_resource path="res://player/art/Dying_003.png" type="Texture" id=65]
-[ext_resource path="res://player/art/Dying_004.png" type="Texture" id=66]
-[ext_resource path="res://player/art/Dying_005.png" type="Texture" id=67]
-[ext_resource path="res://player/art/Dying_006.png" type="Texture" id=68]
-[ext_resource path="res://player/art/Dying_007.png" type="Texture" id=69]
-[ext_resource path="res://player/art/Dying_008.png" type="Texture" id=70]
-[ext_resource path="res://player/art/Dying_009.png" type="Texture" id=71]
-[ext_resource path="res://player/art/Dying_010.png" type="Texture" id=72]
-[ext_resource path="res://player/art/Dying_011.png" type="Texture" id=73]
-[ext_resource path="res://player/art/Dying_012.png" type="Texture" id=74]
-[ext_resource path="res://player/art/Dying_013.png" type="Texture" id=75]
-[ext_resource path="res://player/art/Dying_014.png" type="Texture" id=76]
-[ext_resource path="res://lights/LittleLight.png" type="Texture" id=77]
-[ext_resource path="res://player/footstep_wood_walk_01.wav" type="AudioStream" id=78]
-[ext_resource path="res://player/voice_male_breathing_mask_loop_jog_01.wav" type="AudioStream" id=79]
+[ext_resource path="res://player/art/Hurt_000.png" type="Texture" id=62]
+[ext_resource path="res://player/art/Hurt_001.png" type="Texture" id=63]
+[ext_resource path="res://player/art/Hurt_002.png" type="Texture" id=64]
+[ext_resource path="res://player/art/Hurt_003.png" type="Texture" id=65]
+[ext_resource path="res://player/art/Hurt_004.png" type="Texture" id=66]
+[ext_resource path="res://player/art/Hurt_005.png" type="Texture" id=67]
+[ext_resource path="res://player/art/Hurt_006.png" type="Texture" id=68]
+[ext_resource path="res://player/art/Hurt_007.png" type="Texture" id=69]
+[ext_resource path="res://player/art/Hurt_008.png" type="Texture" id=70]
+[ext_resource path="res://player/art/Hurt_009.png" type="Texture" id=71]
+[ext_resource path="res://player/art/Hurt_010.png" type="Texture" id=72]
+[ext_resource path="res://player/art/Hurt_011.png" type="Texture" id=73]
+[ext_resource path="res://player/art/Dying_000.png" type="Texture" id=74]
+[ext_resource path="res://player/art/Dying_001.png" type="Texture" id=75]
+[ext_resource path="res://player/art/Dying_002.png" type="Texture" id=76]
+[ext_resource path="res://player/art/Dying_003.png" type="Texture" id=77]
+[ext_resource path="res://player/art/Dying_004.png" type="Texture" id=78]
+[ext_resource path="res://player/art/Dying_005.png" type="Texture" id=79]
+[ext_resource path="res://player/art/Dying_006.png" type="Texture" id=80]
+[ext_resource path="res://player/art/Dying_007.png" type="Texture" id=81]
+[ext_resource path="res://player/art/Dying_008.png" type="Texture" id=82]
+[ext_resource path="res://player/art/Dying_009.png" type="Texture" id=83]
+[ext_resource path="res://player/art/Dying_010.png" type="Texture" id=84]
+[ext_resource path="res://player/art/Dying_011.png" type="Texture" id=85]
+[ext_resource path="res://player/art/Dying_012.png" type="Texture" id=86]
+[ext_resource path="res://player/art/Dying_013.png" type="Texture" id=87]
+[ext_resource path="res://player/art/Dying_014.png" type="Texture" id=88]
+[ext_resource path="res://lights/LittleLight.png" type="Texture" id=89]
+[ext_resource path="res://player/footstep_dirt_walk_run_01.wav" type="AudioStream" id=90]
+[ext_resource path="res://player/voice_male_breathing_mask_loop_jog_01.wav" type="AudioStream" id=91]
+[ext_resource path="res://player/voices/voice_fun_small_character_emote_sad_02.wav" type="AudioStream" id=92]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -98,22 +111,21 @@ animations = [ {
 "name": "walk_right",
 "speed": 23.0
 }, {
-"frames": [ ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
-"loop": true,
-"name": "die",
-"speed": 23.0
-}, {
-"frames": [  ],
+"frames": [ ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
 "loop": true,
 "name": "hurt",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
+"loop": true,
+"name": "die",
+"speed": 23.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-radius = 13.2556
-height = 3.48558
+extents = Vector2( 8.54462, 5.26632 )
 
 [sub_resource type="Animation" id=3]
 
@@ -247,13 +259,13 @@ position = Vector2( 0, 0.581135 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
+frame = 30
 playing = true
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 1.34681, 13.3306 )
+position = Vector2( 2.39693, 22.8106 )
 shape = SubResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="." index="2"]
@@ -290,7 +302,7 @@ position = Vector2( 0, -3.81161 )
 scale = Vector2( 0.55, 1.2 )
 enabled = true
 editor_only = false
-texture = ExtResource( 77 )
+texture = ExtResource( 89 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 0.839216, 0.423529, 0.423529, 0.396078 )
@@ -314,11 +326,11 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="FeetLight" type="Light2D" parent="." index="4"]
 
 modulate = Color( 0.578125, 0.578125, 0.578125, 0.396902 )
-position = Vector2( 0.0814095, 24.8214 )
+position = Vector2( -0.18211, 24.8214 )
 scale = Vector2( 0.5, 0.3 )
 enabled = true
 editor_only = false
-texture = ExtResource( 77 )
+texture = ExtResource( 89 )
 offset = Vector2( 0, 0 )
 texture_scale = 1.0
 color = Color( 0.839216, 0.423529, 0.423529, 0.396078 )
@@ -341,8 +353,8 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="PlayerSteps" type="AudioStreamPlayer" parent="." index="5"]
 
-stream = ExtResource( 78 )
-volume_db = -25.0
+stream = ExtResource( 90 )
+volume_db = -15.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
@@ -360,8 +372,8 @@ blend_times = [  ]
 
 [node name="PlayerBreathing" type="AudioStreamPlayer" parent="." index="7"]
 
-stream = ExtResource( 79 )
-volume_db = -35.0
+stream = ExtResource( 91 )
+volume_db = -25.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
@@ -386,5 +398,40 @@ playback_speed = 1.0
 anims/flickering = SubResource( 4 )
 anims/flickering_orange = SubResource( 5 )
 blend_times = [  ]
+
+[node name="Camera2D" type="Camera2D" parent="." index="10"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Limit" ]
+
+[node name="PlayerTalking" type="AudioStreamPlayer" parent="." index="11"]
+
+stream = ExtResource( 92 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

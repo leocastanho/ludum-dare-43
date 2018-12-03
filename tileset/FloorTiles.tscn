@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://tileset/paving_01_tile_256_07.png" type="Texture" id=1]
 [ext_resource path="res://tileset/paving_01_tile_256_06.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://tileset/paving_01_tile_256_09.png" type="Texture" id=4]
 [ext_resource path="res://tileset/paving_01_tile_256_11.png" type="Texture" id=5]
 [ext_resource path="res://tileset/pavig_01_tile_water_256_05.png" type="Texture" id=6]
+[ext_resource path="res://tileset/pavig_01_tile_water_256_01.png" type="Texture" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -38,5 +39,10 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite10" type="Sprite" parent="." index="6"]
+
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
 
 

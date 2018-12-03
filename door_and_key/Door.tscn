@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://door_and_key/Door.gd" type="Script" id=1]
 [ext_resource path="res://door_and_key/tile_473.png" type="Texture" id=2]
@@ -17,6 +17,25 @@ extents = Vector2( 31.5982, 52.2627 )
 
 [sub_resource type="Animation" id=3]
 
+resource_name = "Close"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -64.1771, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
 length = 1.0
 loop = false
 step = 0.1
@@ -33,6 +52,11 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( -64.1771, 0 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.228, 10 )
+
 [node name="Door" type="Area2D"]
 
 input_pickable = true
@@ -47,6 +71,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+editor/display_folded = true
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
@@ -75,7 +100,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Open = SubResource( 3 )
+anims/Close = SubResource( 3 )
+anims/Open = SubResource( 4 )
 blend_times = [  ]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
@@ -100,6 +126,24 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
+[node name="CloseDoor" type="Area2D" parent="." index="5"]
+
+position = Vector2( 0.716972, -60.4648 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseDoor" index="0"]
+
+position = Vector2( -0.968559, 6.19876 )
+shape = SubResource( 5 )
+
 [connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]
+
+[connection signal="body_entered" from="CloseDoor" to="." method="_on_CloseDoor_body_entered"]
 
 

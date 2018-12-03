@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/music_epic_orchestral_bg_underscore.wav-5a74406d9168c0d070074bc9cdec035a.sample"
+
+[deps]
+
+source_file="res://sfx/music_epic_orchestral_bg_underscore.wav"
+dest_files=[ "res://.import/music_epic_orchestral_bg_underscore.wav-5a74406d9168c0d070074bc9cdec035a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

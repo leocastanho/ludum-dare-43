@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/voice_male_b_growl_04.wav-011f1f667ae8cc373a7eb9332ca0f810.sample"
+
+[deps]
+
+source_file="res://player/voices/voice_male_b_growl_04.wav"
+dest_files=[ "res://.import/voice_male_b_growl_04.wav-011f1f667ae8cc373a7eb9332ca0f810.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

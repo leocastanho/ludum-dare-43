@@ -1,71 +1,56 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://tileset/FloorTiles.tres" type="TileSet" id=1]
-[ext_resource path="res://tileset/AutoTileWalls.tres" type="TileSet" id=2]
-[ext_resource path="res://door_and_key/Key.tscn" type="PackedScene" id=3]
-[ext_resource path="res://door_and_key/Door.tscn" type="PackedScene" id=4]
-[ext_resource path="res://player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://monster/Monster.tscn" type="PackedScene" id=6]
-[ext_resource path="res://monster/Monster.gd" type="Script" id=7]
-[ext_resource path="res://monster/zombie_voice_breathing_01.wav" type="AudioStream" id=8]
-[ext_resource path="res://lights/LittleLight.png" type="Texture" id=9]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_000.png" type="Texture" id=10]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_001.png" type="Texture" id=11]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_002.png" type="Texture" id=12]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_003.png" type="Texture" id=13]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_004.png" type="Texture" id=14]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_005.png" type="Texture" id=15]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_006.png" type="Texture" id=16]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_007.png" type="Texture" id=17]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_008.png" type="Texture" id=18]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_009.png" type="Texture" id=19]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_010.png" type="Texture" id=20]
-[ext_resource path="res://monster/skeleton_warrior/Front - Idle_011.png" type="Texture" id=21]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_000.png" type="Texture" id=22]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_001.png" type="Texture" id=23]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_002.png" type="Texture" id=24]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_003.png" type="Texture" id=25]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_004.png" type="Texture" id=26]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_005.png" type="Texture" id=27]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_006.png" type="Texture" id=28]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_007.png" type="Texture" id=29]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_008.png" type="Texture" id=30]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_009.png" type="Texture" id=31]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_010.png" type="Texture" id=32]
-[ext_resource path="res://monster/skeleton_knight/Front - Idle_011.png" type="Texture" id=33]
-[ext_resource path="res://sfx/game_over_dark_bell_chime_01.wav" type="AudioStream" id=34]
-[ext_resource path="res://interface/PlayerInterface.tscn" type="PackedScene" id=35]
-[ext_resource path="res://lights/Torch.png" type="Texture" id=36]
-[ext_resource path="res://interface/text_system/text_system.tscn" type="PackedScene" id=37]
+[ext_resource path="res://levels/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://tileset/FloorTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://door_and_key/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://tileset/AutoTileWalls.tres" type="TileSet" id=4]
+[ext_resource path="res://door_and_key/Key.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interface/PlayerInterface.tscn" type="PackedScene" id=6]
+[ext_resource path="res://monster/Sheeps.tscn" type="PackedScene" id=7]
+[ext_resource path="res://NPC/NPC.tscn" type="PackedScene" id=8]
+[ext_resource path="res://player/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sfx/game_over_dark_bell_chime_01.wav" type="AudioStream" id=10]
+[ext_resource path="res://interface/text_system/text_system.tscn" type="PackedScene" id=11]
+[ext_resource path="res://levels/WaterArea.tscn" type="PackedScene" id=12]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="Animation" id=1]
 
-animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "idle_warrior",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
-"loop": true,
-"name": "idle_knight",
-"speed": 23.0
-} ]
+resource_name = "toggle_light_off"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 37.2851, 29.146 )
+extents = Vector2( 10, 183.251 )
 
-[node name="Tutorial" type="Node2D" index="0"]
+[sub_resource type="RectangleShape2D" id=3]
 
-position = Vector2( -10.0295, -1.61765 )
+custom_solver_bias = 0.0
+extents = Vector2( 10, 27.2077 )
+
+[node name="Tutorial" type="Node2D"]
+
+script = ExtResource( 1 )
 
 [node name="Floor" type="TileMap" parent="." index="0"]
 
 scale = Vector2( 0.25, 0.25 )
 mode = 0
-tile_set = ExtResource( 1 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 256, 256 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -80,13 +65,32 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 65556, 4, 0, 65557, 4, 0, 65558, 4, 0, 65559, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 131080, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 131092, 4, 0, 131093, 4, 0, 131094, 4, 0, 131095, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 4, 0, 196615, 4, 0, 196616, 4, 0, 196617, 4, 0, 196618, 4, 0, 196619, 4, 0, 196620, 4, 0, 196621, 4, 0, 196622, 4, 0, 196623, 4, 0, 196624, 4, 0, 196625, 4, 0, 196626, 4, 0, 196627, 4, 0, 196628, 4, 0, 196629, 4, 0, 196630, 4, 0, 196631, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 262152, 4, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262157, 4, 0, 262158, 4, 0, 262159, 4, 0, 262160, 4, 0, 262161, 4, 0, 262162, 4, 0, 262163, 4, 0, 262164, 4, 0, 262165, 4, 0, 262166, 4, 0, 262167, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 327692, 4, 0, 327693, 4, 0, 327694, 4, 0, 327695, 4, 0, 327696, 4, 0, 327697, 4, 0, 327698, 4, 0, 327699, 4, 0, 327700, 4, 0, 327701, 4, 0, 327702, 4, 0, 327703, 4, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 393226, 4, 0, 393227, 4, 0, 393228, 4, 0, 393229, 4, 0, 393230, 4, 0, 393231, 4, 0, 393232, 4, 0, 393233, 4, 0, 393234, 4, 0, 393235, 4, 0, 393236, 4, 0, 393237, 4, 0, 393238, 4, 0, 393239, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 458768, 4, 0, 458769, 4, 0, 458770, 4, 0, 458771, 4, 0, 458772, 4, 0, 458773, 4, 0, 458774, 4, 0, 458775, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 4, 0, 524303, 4, 0, 524304, 4, 0, 524305, 4, 0, 524306, 4, 0, 524307, 4, 0, 524308, 4, 0, 524309, 4, 0, 524310, 4, 0, 524311, 4, 0 )
+tile_data = PoolIntArray( 196609, -1610612732, 0, 196610, -1610612732, 0, 196611, -1073741824, 0, 196612, -1073741823, 0, 196613, -1610612732, 0, 196614, -1610612732, 0, 196615, -1610612732, 0, 196616, -1610612732, 0, 196617, -1073741821, 0, 196618, -1073741821, 0, 196619, -1610612732, 0, 196620, -1610612732, 0, 196621, -1610612732, 0, 196622, 5, 0, 196623, -1610612731, 0, 196624, -1610612732, 0, 196625, -1073741823, 0, 196626, -1610612732, 0, 196627, -1610612732, 0, 196628, -1610612732, 0, 196629, -1610612732, 0, 196630, -1073741821, 0, 196631, -1073741821, 0, 196633, -1073741820, 0, 196634, -1073741820, 0, 196635, -1073741820, 0, 196636, -1073741820, 0, 196637, 0, 0, 196638, 0, 0, 196639, 1, 0, 196640, -1073741820, 0, 196641, -1073741820, 0, 196642, -1073741820, 0, 196643, 3, 0, 196644, -1073741820, 0, 196645, -1073741820, 0, 196646, 5, 0, 196647, -1610612731, 0, 196648, -1073741820, 0, 196649, -1073741820, 0, 196651, 4, 0, 196652, 4, 0, 196653, 2, 0, 196654, 3, 0, 196655, 4, 0, 196656, 4, 0, 196657, 4, 0, 196658, 4, 0, 196659, 4, 0, 196660, 4, 0, 196661, 4, 0, 196662, 4, 0, 196663, 4, 0, 196664, 4, 0, 196665, 4, 0, 196667, 4, 0, 196668, 4, 0, 196669, 3, 0, 196670, 4, 0, 196671, 4, 0, 196672, 4, 0, 196673, 4, 0, 196674, 4, 0, 262145, -1073741821, 0, 262146, -1610612732, 0, 262147, -1073741822, 0, 262148, -1073741822, 0, 262149, -1610612732, 0, 262150, -1610612732, 0, 262151, -1610612732, 0, 262152, -1610612732, 0, 262153, -1610612732, 0, 262154, -1610612732, 0, 262155, -1073741821, 0, 262156, -1610612732, 0, 262157, -1610612732, 0, 262158, -1610612730, 0, 262159, -1073741818, 0, 262160, -1610612732, 0, 262161, -1610612732, 0, 262162, -1073741824, 0, 262163, -1610612732, 0, 262164, -1610612732, 0, 262165, -1610612732, 0, 262166, -1610612732, 0, 262167, 1, 0, 262168, 2, 0, 262169, 0, 0, 262170, 3, 0, 262171, -1073741820, 0, 262172, -1073741820, 0, 262173, 2, 0, 262174, 1, 0, 262175, 0, 0, 262176, -1073741820, 0, 262177, -1073741820, 0, 262178, -1073741820, 0, 262179, 2, 0, 262180, -1073741820, 0, 262181, -1073741820, 0, 262182, -1610612730, 0, 262183, -1073741818, 0, 262184, -1073741820, 0, 262185, 2, 0, 262186, 1, 0, 262187, 2, 0, 262188, 4, 0, 262189, 1, 0, 262190, 2, 0, 262191, 4, 0, 262192, 4, 0, 262193, 4, 0, 262194, 2, 0, 262195, 4, 0, 262196, 4, 0, 262197, 4, 0, 262198, 1, 0, 262199, 4, 0, 262200, 4, 0, 262201, 1, 0, 262202, 4, 0, 262203, 4, 0, 262204, 3, 0, 262205, 4, 0, 262206, 1, 0, 262207, 4, 0, 262208, 3, 0, 262209, 4, 0, 262210, 4, 0, 327681, -1073741821, 0, 327682, -1610612732, 0, 327683, -1610612732, 0, 327684, -1610612732, 0, 327685, -1610612732, 0, 327686, -1073741821, 0, 327687, -1073741821, 0, 327688, -1073741824, 0, 327689, -1610612732, 0, 327690, -1610612732, 0, 327691, -1610612732, 0, 327692, -1610612732, 0, 327693, -1073741824, 0, 327694, -1610612730, 0, 327695, -1073741818, 0, 327696, -1610612732, 0, 327697, -1610612732, 0, 327698, -1073741822, 0, 327699, -1610612732, 0, 327700, -1073741824, 0, 327701, -1610612732, 0, 327702, -1610612732, 0, 327703, -1073741821, 0, 327705, -1073741820, 0, 327706, -1073741820, 0, 327707, 3, 0, 327708, -1073741820, 0, 327709, -1073741820, 0, 327710, -1073741820, 0, 327711, -1073741820, 0, 327712, -1073741820, 0, 327713, 3, 0, 327714, -1073741820, 0, 327715, 3, 0, 327716, -1073741820, 0, 327717, -1073741820, 0, 327718, -1610612730, 0, 327719, -1073741818, 0, 327720, -1073741820, 0, 327721, -1073741820, 0, 327723, 4, 0, 327724, 4, 0, 327725, 4, 0, 327726, 4, 0, 327727, 4, 0, 327728, 1, 0, 327729, 4, 0, 327730, 4, 0, 327731, 4, 0, 327732, 4, 0, 327733, 4, 0, 327734, 4, 0, 327735, 4, 0, 327736, 1, 0, 327737, 4, 0, 327739, 3, 0, 327740, 4, 0, 327741, 4, 0, 327742, 2, 0, 327743, 4, 0, 327744, 3, 0, 327745, 4, 0, 327746, 3, 0, 327747, 0, 0, 393217, -1610612732, 0, 393218, -1073741821, 0, 393219, -1610612732, 0, 393220, -1610612732, 0, 393221, -1610612732, 0, 393222, -1610612732, 0, 393223, -1610612732, 0, 393224, -1610612732, 0, 393225, -1073741823, 0, 393226, -1610612732, 0, 393227, -1610612732, 0, 393228, -1610612732, 0, 393229, -1073741824, 0, 393230, -1073741819, 0, 393231, 1610612741, 0, 393232, -1610612732, 0, 393233, -1610612732, 0, 393234, -1610612732, 0, 393235, -1610612732, 0, 393236, -1073741823, 0, 393237, -1610612732, 0, 393238, -1073741821, 0, 393239, -1610612732, 0, 393241, -1073741820, 0, 393242, -1073741820, 0, 393243, 0, 0, 393244, -1073741820, 0, 393245, -1073741820, 0, 393246, 3, 0, 393247, -1073741820, 0, 393248, 3, 0, 393249, 2, 0, 393250, -1073741820, 0, 393251, -1073741820, 0, 393252, -1073741820, 0, 393253, -1073741820, 0, 393254, -1073741819, 0, 393255, 1610612741, 0, 393256, -1073741820, 0, 393257, 2, 0, 393259, 4, 0, 393260, 3, 0, 393261, 4, 0, 393262, 4, 0, 393263, 4, 0, 393264, 4, 0, 393265, 4, 0, 393266, 4, 0, 393267, 3, 0, 393268, 4, 0, 393269, 4, 0, 393270, 4, 0, 393271, 4, 0, 393272, 4, 0, 393273, 4, 0, 393275, 4, 0, 393276, 1, 0, 393277, 4, 0, 393278, 4, 0, 393279, 3, 0, 393280, 4, 0, 393281, 4, 0, 393282, 3, 0, 458758, -1610612732, 0, 458759, -1610612732, 0, 458760, -1610612732, 0, 458761, -1610612732, 0, 458762, -1610612732, 0, 458795, 4, 0, 458796, 2, 0, 458797, 3, 0, 458798, 2, 0, 458799, 4, 0, 458800, 1, 0, 458801, 4, 0, 458802, 4, 0, 458803, 4, 0, 458804, 4, 0, 458805, 1, 0, 458806, 4, 0, 458807, 2, 0, 458808, 4, 0, 458809, 2, 0, 458810, 2, 0, 458811, 1, 0, 458812, 2, 0, 458813, 3, 0, 458814, 1, 0, 458815, 4, 0, 458816, 4, 0, 458817, 4, 0, 458818, 3, 0, 524331, 4, 0, 524332, 4, 0, 524333, 4, 0, 524334, 3, 0, 524335, 4, 0, 524336, 4, 0, 524337, 1, 0, 524338, 4, 0, 524339, 3, 0, 524340, 4, 0, 524341, 4, 0, 524342, 4, 0, 524343, 4, 0, 524344, 4, 0, 524345, 4, 0, 524347, 4, 0, 524348, 4, 0, 524349, 4, 0, 524350, 3, 0, 524351, 4, 0, 524352, 4, 0, 524353, 4, 0, 524354, 4, 0, 589867, 4, 0, 589868, 4, 0, 589869, 1, 0, 589870, 4, 0, 589871, 4, 0, 589872, 4, 0, 589873, 4, 0, 589874, 4, 0, 589875, 4, 0, 589876, 4, 0, 589877, 4, 0, 589878, 3, 0, 589879, 4, 0, 589880, 4, 0, 589881, 4, 0, 655409, 4, 0, 655410, 4, 0, 655411, 4, 0, 655412, 3, 0, 655413, 4, 0, 655417, 4, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="Walls" type="TileMap" parent="." index="1"]
+[node name="Doors" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+
+[node name="Door" parent="Doors" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 1568.86, 287.382 )
+rotation = 1.5708
+
+[node name="Door2" parent="Doors" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 2720.25, 287.382 )
+rotation = 1.5708
+
+[node name="Door3" parent="Doors" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 3737.14, 479.441 )
+rotation = 1.5708
+
+[node name="Walls" type="TileMap" parent="." index="2"]
 
 mode = 0
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 4 )
 cell_size = Vector2( 64, 64 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -101,194 +105,300 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 0, 0, 262144, 1, 0, 262146, 2, 0, 262146, 3, 0, 262146, 4, 0, 262146, 5, 0, 262146, 6, 0, 262146, 7, 0, 262146, 8, 0, 262146, 9, 0, 262146, 10, 0, 262146, 11, 0, 262146, 12, 0, 262146, 13, 0, 262146, 14, 0, 262146, 15, 0, 262146, 16, 0, 262146, 17, 0, 262146, 18, 0, 262146, 19, 0, 262146, 20, 0, 262146, 21, 0, 262146, 22, 0, 262146, 23, 0, 262146, 24, 0, 262145, 65536, 0, 327682, 65560, 0, 327682, 131072, 0, 327682, 131096, 0, 327682, 196608, 0, 327682, 196632, 0, 327682, 262144, 0, 327682, 262168, 0, 327682, 327680, 0, 327682, 327704, 0, 327682, 393216, 0, 327682, 393240, 0, 327682, 458752, 0, 327682, 458776, 0, 327682, 524288, 0, 327682, 524312, 0, 327682, 589824, 0, 327680, 589825, 0, 262146, 589826, 0, 262146, 589827, 0, 262146, 589828, 0, 262146, 589829, 0, 262146, 589830, 0, 262146, 589831, 0, 262146, 589832, 0, 262146, 589833, 0, 262146, 589834, 0, 262146, 589835, 0, 262146, 589836, 0, 262146, 589837, 0, 262146, 589838, 0, 262146, 589839, 0, 262146, 589840, 0, 262146, 589841, 0, 262146, 589842, 0, 262146, 589843, 0, 262146, 589844, 0, 262146, 589845, 0, 262146, 589846, 0, 262146, 589847, 0, 262146, 589848, 0, 327681 )
+tile_data = PoolIntArray( 131072, 0, 262144, 131073, 0, 262146, 131074, 0, 262146, 131075, 0, 262146, 131076, 0, 262146, 131077, 0, 262146, 131078, 0, 262146, 131079, 0, 262146, 131080, 0, 262146, 131081, 0, 262146, 131082, 0, 262146, 131083, 0, 262146, 131084, 0, 262146, 131085, 0, 262146, 131086, 0, 262146, 131087, 0, 262146, 131088, 0, 262146, 131089, 0, 262146, 131090, 0, 262146, 131091, 0, 262146, 131092, 0, 262146, 131093, 0, 262146, 131094, 0, 262146, 131095, 0, 262146, 131096, 0, 262147, 131097, 0, 262146, 131098, 0, 262146, 131099, 0, 262146, 131100, 0, 262146, 131101, 0, 262146, 131102, 0, 262146, 131103, 0, 262146, 131104, 0, 262146, 131105, 0, 262146, 131106, 0, 262146, 131107, 0, 262146, 131108, 0, 262146, 131109, 0, 262146, 131110, 0, 262146, 131111, 0, 262146, 131112, 0, 262146, 131113, 0, 262146, 131114, 0, 262147, 131115, 0, 262146, 131116, 0, 262146, 131117, 0, 262146, 131118, 0, 262146, 131119, 0, 262146, 131120, 0, 262146, 131121, 0, 262146, 131122, 0, 262146, 131123, 0, 262146, 131124, 0, 262146, 131125, 0, 262146, 131126, 0, 262146, 131127, 0, 262146, 131128, 0, 262146, 131129, 0, 262146, 131130, 0, 262147, 131131, 0, 262146, 131132, 0, 262146, 131133, 0, 262146, 131134, 0, 262146, 131135, 0, 262146, 131136, 0, 262146, 131137, 0, 262146, 131138, 0, 262146, 131139, 0, 262145, 196608, 0, 327682, 196632, 0, 262150, 196650, 0, 262150, 196666, 0, 327682, 196675, 0, 327682, 262144, 0, 327682, 262202, 0, 327682, 262211, 0, 262150, 327680, 0, 327682, 327704, 0, 327685, 327722, 0, 327685, 327738, 0, 327682, 393216, 0, 327682, 393240, 0, 327682, 393258, 0, 327682, 393274, 0, 262150, 393283, 0, 327685, 458752, 0, 327680, 458753, 0, 262146, 458754, 0, 262146, 458755, 0, 262146, 458756, 0, 262146, 458757, 0, 262146, 458758, 0, 262146, 458759, 0, 262146, 458760, 0, 262146, 458761, 0, 262146, 458762, 0, 262146, 458763, 0, 262146, 458764, 0, 262146, 458765, 0, 262146, 458766, 0, 262146, 458767, 0, 262146, 458768, 0, 262146, 458769, 0, 262146, 458770, 0, 262146, 458771, 0, 262146, 458772, 0, 262146, 458773, 0, 262146, 458774, 0, 262146, 458775, 0, 262146, 458776, 0, 262148, 458777, 0, 262146, 458778, 0, 262146, 458779, 0, 262146, 458780, 0, 262146, 458781, 0, 262146, 458782, 0, 262146, 458783, 0, 262146, 458784, 0, 262146, 458785, 0, 262146, 458786, 0, 262146, 458787, 0, 262146, 458788, 0, 262146, 458789, 0, 262146, 458790, 0, 262146, 458791, 0, 262146, 458792, 0, 262146, 458793, 0, 262146, 458794, 0, 327684, 458819, 0, 327682, 524330, 0, 327682, 524346, 0, 327685, 524355, 0, 327682, 589866, 0, 327682, 589882, 0, 327683, 589883, 0, 262146, 589884, 0, 262146, 589885, 0, 262146, 589886, 0, 262146, 589887, 0, 262146, 589888, 0, 262146, 589889, 0, 262146, 589890, 0, 262146, 589891, 0, 327681, 655402, 0, 327680, 655403, 0, 262146, 655404, 0, 262146, 655405, 0, 262146, 655406, 0, 262146, 655407, 0, 262146, 655408, 0, 262146, 655409, 0, 262146, 655410, 0, 262146, 655411, 0, 262146, 655412, 0, 262146, 655413, 0, 262146, 655414, 0, 262146, 655415, 0, 262146, 655416, 0, 262146, 655417, 0, 262146, 655418, 0, 327681 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." index="2"]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="3"]
 
+editor/display_folded = true
 color = Color( 1, 1, 1, 1 )
 
-[node name="Key" parent="." index="3" instance=ExtResource( 3 )]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate" index="0"]
 
-position = Vector2( 1184.58, 290.659 )
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/toggle_light_off = SubResource( 1 )
+blend_times = [  ]
 
-[node name="Door" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Keys" type="Node2D" parent="." index="4"]
 
-position = Vector2( 1568.86, 287.382 )
-rotation = 1.5708
+editor/display_folded = true
 
-[node name="YSort" type="YSort" parent="." index="5"]
+[node name="Key" parent="Keys" index="0" instance=ExtResource( 5 )]
 
+editor/display_folded = true
+position = Vector2( 1315.59, 322.052 )
+wich_door = NodePath("../../Doors/Door")
+
+[node name="AudioStreamPlayer2D" parent="Keys/Key" index="2"]
+
+max_distance = 1000.0
+
+[node name="Key2" parent="Keys" index="1" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 2658.95, 423.836 )
+wich_door = NodePath("../../Doors/Door2")
+
+[node name="AudioStreamPlayer2D" parent="Keys/Key2" index="2"]
+
+max_distance = 1000.0
+
+[node name="Key3" parent="Keys" index="2" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+position = Vector2( 3328.94, 399.239 )
+wich_door = NodePath("../../Doors/Door3")
+
+[node name="AudioStreamPlayer2D" parent="Keys/Key3" index="2"]
+
+max_distance = 800.0
+
+[node name="PlayerInterface" parent="." index="5" instance=ExtResource( 6 )]
+
+[node name="YSort" type="YSort" parent="." index="6"]
+
+editor/display_folded = true
 sort_enabled = true
 
-[node name="Player" parent="YSort" index="0" instance=ExtResource( 5 )]
+[node name="Sheeps" type="Node2D" parent="YSort" index="0"]
 
 editor/display_folded = true
-position = Vector2( 141.64, 330.715 )
 
-[node name="Camera2D" type="Camera2D" parent="YSort/Player" index="2"]
+[node name="Sheeps" parent="YSort/Sheeps" index="0" instance=ExtResource( 7 )]
 
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 0.5, 0.5 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.0
-drag_margin_top = 0.0
-drag_margin_right = 0.0
-drag_margin_bottom = 0.0
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Editor", "Offset", "Smoothing" ]
+position = Vector2( 453.812, 327.91 )
 
-[node name="Monsters" type="Node2D" parent="YSort" index="1"]
+[node name="AnimatedSprite" parent="YSort/Sheeps/Sheeps" index="2"]
 
-[node name="Monster2" parent="YSort/Monsters" index="0" instance=ExtResource( 6 )]
+frame = 29
 
-position = Vector2( 812.86, 490.551 )
+[node name="Sheeps3" parent="YSort/Sheeps" index="1" instance=ExtResource( 7 )]
 
-[node name="Monster6" type="RigidBody2D" parent="YSort/Monsters" index="1"]
+position = Vector2( 699.507, 401.769 )
 
-editor/display_folded = true
-position = Vector2( 222.701, 322.999 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-mode = 0
-mass = 1.0
-friction = 1.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-script = ExtResource( 7 )
+[node name="Sheeps2" parent="YSort/Sheeps" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 697.245, 217.822 )
+
+[node name="Sheeps4" parent="YSort/Sheeps" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 2324.33, 392.941 )
+
+[node name="Sheeps6" parent="YSort/Sheeps" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 2382.16, 235.741 )
+
+[node name="Sheeps9" parent="YSort/Sheeps" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 2867.16, 540.172 )
+
+[node name="Sheeps10" parent="YSort/Sheeps" index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 2867.16, 540.172 )
+
+[node name="Sheeps11" parent="YSort/Sheeps" index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 2943.03, 376.129 )
+
+[node name="Sheeps12" parent="YSort/Sheeps" index="8" instance=ExtResource( 7 )]
+
+position = Vector2( 3096.82, 265.399 )
+
+[node name="Sheeps13" parent="YSort/Sheeps" index="9" instance=ExtResource( 7 )]
+
+position = Vector2( 3180.9, 429.443 )
+
+[node name="Sheeps14" parent="YSort/Sheeps" index="10" instance=ExtResource( 7 )]
+
+position = Vector2( 3092.72, 554.526 )
+
+[node name="Sheeps15" parent="YSort/Sheeps" index="11" instance=ExtResource( 7 )]
+
+position = Vector2( 3383.9, 521.717 )
+
+[node name="Sheeps17" parent="YSort/Sheeps" index="12" instance=ExtResource( 7 )]
+
+position = Vector2( 3591, 560.677 )
+
+[node name="Sheeps18" parent="YSort/Sheeps" index="13" instance=ExtResource( 7 )]
+
+position = Vector2( 3502.83, 398.685 )
+
+[node name="Sheeps19" parent="YSort/Sheeps" index="14" instance=ExtResource( 7 )]
+
+position = Vector2( 3668.92, 396.634 )
+
+[node name="Sheeps20" parent="YSort/Sheeps" index="15" instance=ExtResource( 7 )]
+
+position = Vector2( 3558.2, 246.945 )
+
+[node name="Sheeps5" parent="YSort/Sheeps" index="16" instance=ExtResource( 7 )]
+
+position = Vector2( 2142.86, 302.05 )
+
+[node name="NPC" parent="YSort" index="1" instance=ExtResource( 8 )]
+
+position = Vector2( 263, 260 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="YSort/Monsters/Monster6" index="0"]
+[node name="Player" parent="YSort" index="2" instance=ExtResource( 9 )]
 
-stream = ExtResource( 8 )
-volume_db = 15.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 300.0
-attenuation = 5.09824
-bus = "Master"
-area_mask = 1
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 142, 330 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="Light2D" type="Light2D" parent="YSort/Monsters/Monster6" index="1"]
+[node name="Monsters" type="Node2D" parent="YSort" index="3"]
 
-visible = false
-position = Vector2( 0.970612, -1.47403 )
-scale = Vector2( 1.3, 2 )
-enabled = true
-editor_only = false
-texture = ExtResource( 9 )
-offset = Vector2( 0, 0 )
-texture_scale = 1.0
-color = Color( 0.773438, 0.773438, 0.773438, 1 )
-energy = 1.0
-mode = 0
-range_height = 0.0
-range_z_min = -1024
-range_z_max = 1024
-range_layer_min = 0
-range_layer_max = 0
-range_item_cull_mask = 1
-shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 0 )
-shadow_buffer_size = 2048
-shadow_gradient_length = 0.0
-shadow_filter = 0
-shadow_filter_smooth = 0.0
-shadow_item_cull_mask = 1
-_sections_unfolded = [ "Transform", "Visibility" ]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/Monsters/Monster6" index="2"]
-
-scale = Vector2( 0.3, 0.3 )
-frames = SubResource( 1 )
-animation = "idle_knight"
-frame = 7
-playing = true
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Monsters/Monster6" index="3"]
-
-position = Vector2( 0, 14.6196 )
-shape = SubResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="Monster3" parent="YSort/Monsters" index="2" instance=ExtResource( 6 )]
-
-position = Vector2( 443.786, 326.282 )
-
-[node name="Monster4" parent="YSort/Monsters" index="3" instance=ExtResource( 6 )]
-
-position = Vector2( 807.901, 139.221 )
-
-[node name="Monster5" parent="YSort/Monsters" index="4" instance=ExtResource( 6 )]
-
-position = Vector2( 1096.84, 279.516 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
-
-stream = ExtResource( 34 )
+stream = ExtResource( 10 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="PlayerInterface" parent="." index="7" instance=ExtResource( 35 )]
-
-[node name="Light2D" type="Light2D" parent="." index="8"]
-
-position = Vector2( 139.992, 314.825 )
-scale = Vector2( 1.1, 3.5 )
-enabled = true
-editor_only = false
-texture = ExtResource( 36 )
-offset = Vector2( 0, 0 )
-texture_scale = 1.0
-color = Color( 1, 1, 1, 1 )
-energy = 1.0
-mode = 0
-range_height = 0.0
-range_z_min = -1024
-range_z_max = 1024
-range_layer_min = 0
-range_layer_max = 0
-range_item_cull_mask = 1
-shadow_enabled = false
-shadow_color = Color( 0, 0, 0, 0 )
-shadow_buffer_size = 2048
-shadow_gradient_length = 0.0
-shadow_filter = 0
-shadow_filter_smooth = 0.0
-shadow_item_cull_mask = 1
-_sections_unfolded = [ "Transform" ]
-
-[node name="text_system" parent="." index="9" instance=ExtResource( 37 )]
+[node name="text_system" parent="." index="8" instance=ExtResource( 11 )]
 
 wich_area = 1
 
+[node name="WaterArea" parent="." index="9" instance=ExtResource( 12 )]
 
+editor/display_folded = true
+position = Vector2( 961.46, 320.884 )
+
+[node name="WaterArea2" parent="." index="10" instance=ExtResource( 12 )]
+
+editor/display_folded = true
+position = Vector2( 2497, 320.884 )
+
+[node name="TutorialPart2" type="Area2D" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 1181.85, 313.733 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialPart2" index="0"]
+
+position = Vector2( 1.36035, 5.4415 )
+shape = SubResource( 2 )
+
+[node name="TutorialPart3" type="Area2D" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 1832.44, 315.718 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialPart3" index="0"]
+
+position = Vector2( 1.36035, 5.4415 )
+shape = SubResource( 2 )
+
+[node name="TutorialPart4" type="Area2D" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( 2870.04, 317.718 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TutorialPart4" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -110.038, 67.281, 17.9622, 68.281, 17.9622, -122.718, -1.03784, -122.718, 0.962158, 50.2811, -112.038, 47.2811 )
+
+[node name="TutorialPart5" type="Area2D" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( 4052.59, 315.718 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialPart5" index="0"]
+
+position = Vector2( -1.36035, 67.8721 )
+shape = SubResource( 2 )
+
+[node name="NPCPosition2" type="Position2D" parent="." index="15"]
+
+position = Vector2( 1245.81, 260 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCPosition3" type="Position2D" parent="." index="16"]
+
+position = Vector2( 1953.61, 260 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCPosition4" type="Position2D" parent="." index="17"]
+
+position = Vector2( 2950.13, 260 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="NPCPosition5" type="Position2D" parent="." index="18"]
+
+position = Vector2( 4201.73, 374.557 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PlayerSpawnPosition2" type="Position2D" parent="." index="19"]
+
+position = Vector2( 1725.38, 281.759 )
+
+[node name="PlayerSpawnPosition3" type="Position2D" parent="." index="20"]
+
+position = Vector2( 2826.39, 283.016 )
+
+[node name="EndOfTutorial" type="Area2D" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 4320.4, 352.455 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfTutorial" index="0"]
+
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="TutorialPart2" to="." method="_on_TutorialPart2_body_entered"]
+
+[connection signal="body_entered" from="TutorialPart3" to="." method="_on_TutorialPart3_body_entered"]
+
+[connection signal="body_entered" from="TutorialPart4" to="." method="_on_TutorialPart4_body_entered"]
+
+[connection signal="body_entered" from="TutorialPart5" to="." method="_on_TutorialPart5_body_entered"]
+
+[connection signal="body_entered" from="EndOfTutorial" to="." method="_on_EndOfTutorial_body_entered"]
+
+
+[editable path="Keys/Key"]
+[editable path="Keys/Key2"]
+[editable path="Keys/Key3"]
+[editable path="YSort/Sheeps/Sheeps"]
+[editable path="WaterArea"]

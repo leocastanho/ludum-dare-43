@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 96.5276, 422.339 )
+extents = Vector2( 217.693, 529.418 )
 
 [node name="WaterArea" type="Area2D"]
 
@@ -49,5 +49,7 @@ bus = "Master"
 area_mask = 1
 
 [connection signal="body_entered" from="." to="." method="_on_WaterArea_body_entered"]
+
+[connection signal="body_exited" from="." to="." method="_on_WaterArea_body_exited"]
 
 
