@@ -2,13 +2,15 @@ tool
 extends Node2D
 
 func play_song():
-#	var distance_between = position.distance_to(global.player.position)
-#	if distance_between <= 300:
-	$AudioStreamPlayer2D.play()
+	if not $AudioStreamPlayer2D.is_playing():
+		$AudioStreamPlayer2D.play()
 
 func _on_Monster_body_entered(body):
-	$Light2D.visible = true
-	global.player.death()
+	if get_tree().get_current_scene().name == "Tutorial":
+		get_node("../../..").restart()
+	else:
+		$Light2D.visible = true
+		get_node("../../..").restart()
 
 func _draw():
-	draw_circle(Vector2(0,0), 190, Color(1,1,1,0.3))
+	draw_circle(Vector2(0,0), $AudioStreamPlayer2D.max_distance, Color(1,1,1,0.3))

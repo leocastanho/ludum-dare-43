@@ -5,6 +5,7 @@ const MAX_SPEED = 130
 const FRICTION = 0.15
 var motion = Vector2()
 
+
 #var disguise = 3
 #var max_diguise = 5
 #var normalPlayer = preload("res://GFX/PNG/Hitman 1/hitman1_stand.png")
@@ -22,11 +23,18 @@ var velocityMultiplier = 1
 var stepsPlayng = false
 
 func _ready():
+	if get_tree().get_current_scene().name == "Tutorial" and not global.passed_first_area_on_tuto:
+		$BodyLight.visible = false
+		$FeetLight.visible = false
+	if not global.player_died:
+		global.payer_spawn_position = position
+	else:
+		position = global.payer_spawn_position
+	global.player_died = false
 	OS.center_window()
 	global.player = self
 	yield(get_tree().create_timer(50), "timeout")
 	$PlayerBreathing.play()
-	
 
 func _physics_process(delta):
 	update_motion(delta)
@@ -44,14 +52,35 @@ func _physics_process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_accept"):
-		for monster in get_node("../Monsters").get_children():
-				var distance_between = monster.global_position.distance_to(position)
+		$PlayerTalking.stream = global.calling_monsters
+		$PlayerTalking.play()
+		yield($PlayerTalking, "finished")
+		if get_tree().get_current_scene().name == "Tutorial":
+				for sheep in get_node("../Sheeps").get_children():
+						var distance_between = sheep.global_position.distance_to(global_position)
+						if distance_between <= 200:
+							sheep.play_song()
+		else:
+			for monster in get_node("../Monsters").get_children():
+				var distance_between = monster.global_position.distance_to(global_position)
 				if distance_between <= 300:
 					monster.play_song()
-	if Input.is_action_just_pressed("Key") and get_node("../../Key") != null:
-		get_node("../../Key/AudioStreamPlayer2D").play()
+	if Input.is_action_just_pressed("Key"):
+		$PlayerTalking.stream = global.calling_key
+		$PlayerTalking.play()
+		yield($PlayerTalking, "finished")
+		if get_node("../../Keys") != null:
+			for key in get_node("../../Keys").get_children():
+				key.get_node("AudioStreamPlayer2D").play()
 	if Input.is_action_just_pressed("Door"):
-		get_node("../../Door/AudioStreamPlayer2D").play()
+		$PlayerTalking.stream = global.calling_door
+		$PlayerTalking.play()
+		yield($PlayerTalking, "finished")
+		if Input.is_action_just_pressed("Door"):
+			if get_node("../../Doors") != null:
+				for door in get_node("../../Doors").get_children():
+					if not door.opened:
+						door.get_node("AudioStreamPlayer2D").play()
 #	if Input.is_action_just_pressed("pop_label"):
 #		$pop_label.pop("teste")
 #		print(position.distance_to(Vector2(0,0)))
@@ -105,12 +134,20 @@ func update_motion(delta):
 		motion.x = lerp(motion.x, 0, FRICTION)
 		motion.y = lerp(motion.y, 0, FRICTION)
 
-func death():
-	set_physics_process(false)
-	$AnimatedSprite.play("die")
-	$PlayerBreathing.stop()
-	get_node("/root/BlindLevelModel/AudioStreamPlayer").play()
-	yield($AnimatedSprite, "animation_finished")
-	$AnimatedSprite.stop()
-	yield(get_tree().create_timer(0.5), "timeout")
-	$AnimationPlayer.play("blink_death")
+func death(normal_game):
+	if normal_game:
+		set_physics_process(false)
+		$AnimatedSprite.play("die")
+		$PlayerBreathing.stop()
+		get_node("../../AudioStreamPlayer").play()
+		yield($AnimatedSprite, "animation_finished")
+		$AnimatedSprite.stop()
+		yield(get_tree().create_timer(0.5), "timeout")
+		$AnimationPlayer.play("blink_death")
+	else:
+		set_physics_process(false)
+		$AnimatedSprite.play("hurt")
+		$PlayerBreathing.stop()
+		get_node("../../AudioStreamPlayer").play()
+		yield($AnimatedSprite, "animation_finished")
+		$AnimatedSprite.play("idle")

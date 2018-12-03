@@ -1,0 +1,58 @@
+[ 
+
+    {"next":["Next"],
+
+    "option1A":["Fight for her"],
+    "option1B":["Let her go"],
+    "close1A":["Fight"],
+    "close1B":["Run for your life!"],
+   
+    "option2A":["One of them", "Mother"],
+    "option2B":["None of them", "Father"],
+    "close2A":["Fight for father"],
+    "close2B":["Fight for mother"],
+
+    "option3A":["Easy path"],
+    "option3B":["Hard path"],
+    "close3A":["Go"],
+    "close3B":["Good luck!"],
+
+    "option4A":["Jorges life"],
+    "option4B":["Power!"],
+    "close4A":["Protect!"],
+    "close4B":["Kill!"],
+
+    "optionFinalA":["Fight for her"],
+    "optionFinalB":["Let her go"],
+    "closeFinalA":["Fight"],
+    "closeFinalB":["Run!"]},
+
+
+    {"next":["Next"],
+
+    "option1A":["Lute por ela"],
+    "option1B":["Deixe-a ir"],
+    "close1A":["Lute!"],
+    "close1B":["Corra por sua vida!"],
+    
+    "option2A":["Um dos dois", "Mãe"],
+    "option2B":["Nenhum deles", "Pai"],
+    "close2A":["Lute pelo pai"],
+    "close2B":["Lute pela mãe"],
+
+    "option3A":["Caminho fácil"],
+    "option3B":["Caminho difícil"],
+    "close3A":["Vá"],
+    "close3B":["Boa sorte!"],
+
+    "option4A":["Salvar Jorge"],
+    "option4B":["Poder!"],
+    "close4A":["Proteja!"],
+    "close4B":["Mate!"],
+
+    "optionFinalA":["fight for her"],
+    "optionFinalB":["let her go"],
+    "closeFinalA":["Fight"],
+    "closeFinalB":["Run!"]}
+]
+
