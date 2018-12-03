@@ -34,7 +34,7 @@ use_filter = false
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Font/fallback", "Settings" ]
 
-[node name="MainMenu" type="CanvasLayer" index="0"]
+[node name="MainMenu" type="CanvasLayer"]
 
 layer = 2
 offset = Vector2( 0, 0 )
@@ -635,9 +635,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -171.5
-margin_top = -138.0
+margin_top = -128.0
 margin_right = 161.5
-margin_bottom = -77.0
+margin_bottom = -67.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1

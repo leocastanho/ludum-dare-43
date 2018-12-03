@@ -17,7 +17,6 @@ func _ready():
 	$NinePatchRect/VBoxContainer/TextureRect3/Exit.connect("gui_input", self, "label_pressed");
 
 func _process(delta):
-	
 	if (Input.is_key_pressed(KEY_UP) && !isPressedKey):
 		match state:
 			CREDITS:

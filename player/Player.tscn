@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://player/art/Idle_000.png" type="Texture" id=2]
@@ -37,61 +37,62 @@
 [ext_resource path="res://player/art/Idle Blinking_015.png" type="Texture" id=35]
 [ext_resource path="res://player/art/Idle Blinking_016.png" type="Texture" id=36]
 [ext_resource path="res://player/art/Idle Blinking_017.png" type="Texture" id=37]
-[ext_resource path="res://player/art/Hurt_000.png" type="Texture" id=38]
-[ext_resource path="res://player/art/Hurt_001.png" type="Texture" id=39]
-[ext_resource path="res://player/art/Hurt_002.png" type="Texture" id=40]
-[ext_resource path="res://player/art/Hurt_003.png" type="Texture" id=41]
-[ext_resource path="res://player/art/Hurt_004.png" type="Texture" id=42]
-[ext_resource path="res://player/art/Hurt_005.png" type="Texture" id=43]
-[ext_resource path="res://player/art/Hurt_006.png" type="Texture" id=44]
-[ext_resource path="res://player/art/Hurt_007.png" type="Texture" id=45]
-[ext_resource path="res://player/art/Hurt_008.png" type="Texture" id=46]
-[ext_resource path="res://player/art/Hurt_009.png" type="Texture" id=47]
-[ext_resource path="res://player/art/Hurt_010.png" type="Texture" id=48]
-[ext_resource path="res://player/art/Hurt_011.png" type="Texture" id=49]
-[ext_resource path="res://player/art/Walking_000.png" type="Texture" id=50]
-[ext_resource path="res://player/art/Walking_001.png" type="Texture" id=51]
-[ext_resource path="res://player/art/Walking_002.png" type="Texture" id=52]
-[ext_resource path="res://player/art/Walking_003.png" type="Texture" id=53]
-[ext_resource path="res://player/art/Walking_004.png" type="Texture" id=54]
-[ext_resource path="res://player/art/Walking_005.png" type="Texture" id=55]
-[ext_resource path="res://player/art/Walking_006.png" type="Texture" id=56]
-[ext_resource path="res://player/art/Walking_007.png" type="Texture" id=57]
-[ext_resource path="res://player/art/Walking_008.png" type="Texture" id=58]
-[ext_resource path="res://player/art/Walking_009.png" type="Texture" id=59]
-[ext_resource path="res://player/art/Walking_010.png" type="Texture" id=60]
-[ext_resource path="res://player/art/Walking_011.png" type="Texture" id=61]
-[ext_resource path="res://player/art/Walking_012.png" type="Texture" id=62]
-[ext_resource path="res://player/art/Walking_013.png" type="Texture" id=63]
-[ext_resource path="res://player/art/Walking_014.png" type="Texture" id=64]
-[ext_resource path="res://player/art/Walking_015.png" type="Texture" id=65]
-[ext_resource path="res://player/art/Walking_016.png" type="Texture" id=66]
-[ext_resource path="res://player/art/Walking_017.png" type="Texture" id=67]
-[ext_resource path="res://player/art/Walking_018.png" type="Texture" id=68]
-[ext_resource path="res://player/art/Walking_019.png" type="Texture" id=69]
-[ext_resource path="res://player/art/Walking_020.png" type="Texture" id=70]
-[ext_resource path="res://player/art/Walking_021.png" type="Texture" id=71]
-[ext_resource path="res://player/art/Walking_022.png" type="Texture" id=72]
-[ext_resource path="res://player/art/Walking_023.png" type="Texture" id=73]
-[ext_resource path="res://player/art/Dying_000.png" type="Texture" id=74]
-[ext_resource path="res://player/art/Dying_001.png" type="Texture" id=75]
-[ext_resource path="res://player/art/Dying_002.png" type="Texture" id=76]
-[ext_resource path="res://player/art/Dying_003.png" type="Texture" id=77]
-[ext_resource path="res://player/art/Dying_004.png" type="Texture" id=78]
-[ext_resource path="res://player/art/Dying_005.png" type="Texture" id=79]
-[ext_resource path="res://player/art/Dying_006.png" type="Texture" id=80]
-[ext_resource path="res://player/art/Dying_007.png" type="Texture" id=81]
-[ext_resource path="res://player/art/Dying_008.png" type="Texture" id=82]
-[ext_resource path="res://player/art/Dying_009.png" type="Texture" id=83]
-[ext_resource path="res://player/art/Dying_010.png" type="Texture" id=84]
-[ext_resource path="res://player/art/Dying_011.png" type="Texture" id=85]
-[ext_resource path="res://player/art/Dying_012.png" type="Texture" id=86]
-[ext_resource path="res://player/art/Dying_013.png" type="Texture" id=87]
-[ext_resource path="res://player/art/Dying_014.png" type="Texture" id=88]
+[ext_resource path="res://player/art/Walking_000.png" type="Texture" id=38]
+[ext_resource path="res://player/art/Walking_001.png" type="Texture" id=39]
+[ext_resource path="res://player/art/Walking_002.png" type="Texture" id=40]
+[ext_resource path="res://player/art/Walking_003.png" type="Texture" id=41]
+[ext_resource path="res://player/art/Walking_004.png" type="Texture" id=42]
+[ext_resource path="res://player/art/Walking_005.png" type="Texture" id=43]
+[ext_resource path="res://player/art/Walking_006.png" type="Texture" id=44]
+[ext_resource path="res://player/art/Walking_007.png" type="Texture" id=45]
+[ext_resource path="res://player/art/Walking_008.png" type="Texture" id=46]
+[ext_resource path="res://player/art/Walking_009.png" type="Texture" id=47]
+[ext_resource path="res://player/art/Walking_010.png" type="Texture" id=48]
+[ext_resource path="res://player/art/Walking_011.png" type="Texture" id=49]
+[ext_resource path="res://player/art/Walking_012.png" type="Texture" id=50]
+[ext_resource path="res://player/art/Walking_013.png" type="Texture" id=51]
+[ext_resource path="res://player/art/Walking_014.png" type="Texture" id=52]
+[ext_resource path="res://player/art/Walking_015.png" type="Texture" id=53]
+[ext_resource path="res://player/art/Walking_016.png" type="Texture" id=54]
+[ext_resource path="res://player/art/Walking_017.png" type="Texture" id=55]
+[ext_resource path="res://player/art/Walking_018.png" type="Texture" id=56]
+[ext_resource path="res://player/art/Walking_019.png" type="Texture" id=57]
+[ext_resource path="res://player/art/Walking_020.png" type="Texture" id=58]
+[ext_resource path="res://player/art/Walking_021.png" type="Texture" id=59]
+[ext_resource path="res://player/art/Walking_022.png" type="Texture" id=60]
+[ext_resource path="res://player/art/Walking_023.png" type="Texture" id=61]
+[ext_resource path="res://player/art/Dying_000.png" type="Texture" id=62]
+[ext_resource path="res://player/art/Dying_001.png" type="Texture" id=63]
+[ext_resource path="res://player/art/Dying_002.png" type="Texture" id=64]
+[ext_resource path="res://player/art/Dying_003.png" type="Texture" id=65]
+[ext_resource path="res://player/art/Dying_004.png" type="Texture" id=66]
+[ext_resource path="res://player/art/Dying_005.png" type="Texture" id=67]
+[ext_resource path="res://player/art/Dying_006.png" type="Texture" id=68]
+[ext_resource path="res://player/art/Dying_007.png" type="Texture" id=69]
+[ext_resource path="res://player/art/Dying_008.png" type="Texture" id=70]
+[ext_resource path="res://player/art/Dying_009.png" type="Texture" id=71]
+[ext_resource path="res://player/art/Dying_010.png" type="Texture" id=72]
+[ext_resource path="res://player/art/Dying_011.png" type="Texture" id=73]
+[ext_resource path="res://player/art/Dying_012.png" type="Texture" id=74]
+[ext_resource path="res://player/art/Dying_013.png" type="Texture" id=75]
+[ext_resource path="res://player/art/Dying_014.png" type="Texture" id=76]
+[ext_resource path="res://player/art/Hurt_000.png" type="Texture" id=77]
+[ext_resource path="res://player/art/Hurt_001.png" type="Texture" id=78]
+[ext_resource path="res://player/art/Hurt_002.png" type="Texture" id=79]
+[ext_resource path="res://player/art/Hurt_003.png" type="Texture" id=80]
+[ext_resource path="res://player/art/Hurt_004.png" type="Texture" id=81]
+[ext_resource path="res://player/art/Hurt_005.png" type="Texture" id=82]
+[ext_resource path="res://player/art/Hurt_006.png" type="Texture" id=83]
+[ext_resource path="res://player/art/Hurt_007.png" type="Texture" id=84]
+[ext_resource path="res://player/art/Hurt_008.png" type="Texture" id=85]
+[ext_resource path="res://player/art/Hurt_009.png" type="Texture" id=86]
+[ext_resource path="res://player/art/Hurt_010.png" type="Texture" id=87]
+[ext_resource path="res://player/art/Hurt_011.png" type="Texture" id=88]
 [ext_resource path="res://lights/LittleLight.png" type="Texture" id=89]
 [ext_resource path="res://player/footstep_dirt_walk_run_01.wav" type="AudioStream" id=90]
 [ext_resource path="res://player/voice_male_breathing_mask_loop_jog_01.wav" type="AudioStream" id=91]
 [ext_resource path="res://player/voices/voice_fun_character_cute_cartoon_06.wav" type="AudioStream" id=92]
+[ext_resource path="res://player/voices/voice_fun_small_character_emote_sad_04.wav" type="AudioStream" id=93]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -101,31 +102,31 @@ animations = [ {
 "name": "idle",
 "speed": 23.0
 }, {
+"frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 23.0
+}, {
 "frames": [  ],
 "loop": true,
 "name": "attack",
 "speed": 26.0
 }, {
-"frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
-"loop": true,
-"name": "hurt",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
-"loop": true,
-"name": "walk_right",
-"speed": 23.0
-}, {
-"frames": [ ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
+"frames": [ ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
 "loop": true,
 "name": "die",
 "speed": 23.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
+"loop": true,
+"name": "hurt",
+"speed": 20.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8.54462, 5.26632 )
+extents = Vector2( 8.54462, 7.32809 )
 
 [sub_resource type="Animation" id=3]
 
@@ -244,6 +245,255 @@ tracks/1/keys = {
 "values": [ Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0, 0, 0, 1 ), Color( 0.760784, 0.462745, 0.329412, 0.74902 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ), Color( 0.839216, 0.423529, 0.423529, 0.396078 ) ]
 }
 
+[sub_resource type="Animation" id=6]
+
+resource_name = "FallingPit"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotating")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:limit_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:limit_top")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "HittingGround"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotating")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0, 720.0, 1080.0, 1440.0, 1440.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../AnimatedSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.1, 0.1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../BodyLight:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.99943, 10.9078 ), Vector2( 0.55, 1.2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../BodyLight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7.04558, -37.6522 ), Vector2( 0, -3.81161 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../FeetLight:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.40218, 2.64131 ), Vector2( 0.5, 0.3 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../FeetLight:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16.0087, 255.585 ), Vector2( -0.18211, 24.8214 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "idle"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../AnimatedSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:limit_left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ -1000 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:limit_top")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ -1000 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../BodyLight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -3.81161 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../BodyLight:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.55, 1.2 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../FeetLight:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.18211, 24.8214 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../FeetLight:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.5, 0.3 ) ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
@@ -259,13 +509,13 @@ position = Vector2( 0, 0.581135 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 3
+frame = 6
 playing = true
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 2.39693, 22.8106 )
+position = Vector2( 2.39693, 20.8218 )
 shape = SubResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="." index="2"]
@@ -402,11 +652,11 @@ blend_times = [  ]
 [node name="Camera2D" type="Camera2D" parent="." index="10"]
 
 anchor_mode = 1
-rotating = false
+rotating = true
 current = true
 zoom = Vector2( 0.5, 0.5 )
-limit_left = 0
-limit_top = 0
+limit_left = -1000
+limit_top = -1000
 limit_right = 10000000
 limit_bottom = 10000000
 limit_smoothed = false
@@ -423,12 +673,33 @@ drag_margin_bottom = 0.0
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Limit" ]
+_sections_unfolded = [ "Drag Margin", "Limit", "Transform" ]
+
+[node name="CameraAnim" type="AnimationPlayer" parent="Camera2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FallingPit = SubResource( 6 )
+anims/HittingGround = SubResource( 7 )
+anims/idle = SubResource( 8 )
+blend_times = [  ]
 
 [node name="PlayerTalking" type="AudioStreamPlayer" parent="." index="11"]
 
 stream = ExtResource( 92 )
 volume_db = -17.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="PlayerFalling" type="AudioStreamPlayer" parent="." index="12"]
+
+stream = ExtResource( 93 )
+volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0

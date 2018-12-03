@@ -15,4 +15,6 @@ func _on_CloseDoor_body_entered(body):
 		$AnimationPlayer.play("Close")
 		closed = true
 
-
+func _draw():
+	if global.show_sound_circle:
+		draw_circle(Vector2(0,0), $AudioStreamPlayer2D.max_distance - 70, Color(1,1,1,0.3))

@@ -160,20 +160,18 @@ max_distance = 800.0
 
 [node name="YSort" type="YSort" parent="." index="6"]
 
-editor/display_folded = true
 sort_enabled = true
 
 [node name="Sheeps" type="Node2D" parent="YSort" index="0"]
 
-editor/display_folded = true
-
 [node name="Sheeps" parent="YSort/Sheeps" index="0" instance=ExtResource( 7 )]
 
+editor/display_folded = true
 position = Vector2( 453.812, 327.91 )
 
 [node name="AnimatedSprite" parent="YSort/Sheeps/Sheeps" index="2"]
 
-frame = 13
+frame = 37
 
 [node name="Sheeps3" parent="YSort/Sheeps" index="1" instance=ExtResource( 7 )]
 
@@ -209,33 +207,25 @@ position = Vector2( 3096.82, 265.399 )
 
 [node name="Sheeps13" parent="YSort/Sheeps" index="9" instance=ExtResource( 7 )]
 
-position = Vector2( 3180.9, 429.443 )
+position = Vector2( 3180, 460 )
 
-[node name="Sheeps14" parent="YSort/Sheeps" index="10" instance=ExtResource( 7 )]
-
-position = Vector2( 3092.72, 554.526 )
-
-[node name="Sheeps15" parent="YSort/Sheeps" index="11" instance=ExtResource( 7 )]
+[node name="Sheeps15" parent="YSort/Sheeps" index="10" instance=ExtResource( 7 )]
 
 position = Vector2( 3383.9, 521.717 )
 
-[node name="Sheeps17" parent="YSort/Sheeps" index="12" instance=ExtResource( 7 )]
+[node name="Sheeps17" parent="YSort/Sheeps" index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 3591, 560.677 )
 
-[node name="Sheeps18" parent="YSort/Sheeps" index="13" instance=ExtResource( 7 )]
+[node name="Sheeps18" parent="YSort/Sheeps" index="12" instance=ExtResource( 7 )]
 
-position = Vector2( 3502.83, 398.685 )
+position = Vector2( 3500, 350 )
 
-[node name="Sheeps19" parent="YSort/Sheeps" index="14" instance=ExtResource( 7 )]
+[node name="Sheeps20" parent="YSort/Sheeps" index="13" instance=ExtResource( 7 )]
 
-position = Vector2( 3668.92, 396.634 )
+position = Vector2( 3630, 250 )
 
-[node name="Sheeps20" parent="YSort/Sheeps" index="15" instance=ExtResource( 7 )]
-
-position = Vector2( 3558.2, 246.945 )
-
-[node name="Sheeps5" parent="YSort/Sheeps" index="16" instance=ExtResource( 7 )]
+[node name="Sheeps5" parent="YSort/Sheeps" index="14" instance=ExtResource( 7 )]
 
 position = Vector2( 2142.86, 302.05 )
 
