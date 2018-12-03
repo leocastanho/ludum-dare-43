@@ -6,6 +6,9 @@ var tuto_part_four_activated = false
 var tuto_part_five_activated = false
 onready var text_system = $text_system
 
+func _ready():
+	get_node("/root/MusicBG").volume_db = -22
+
 func restart():
 	global.player.death(false)
 	global.player_died = true

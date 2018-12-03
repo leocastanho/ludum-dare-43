@@ -12,9 +12,9 @@ func _ready():
 	# Initialization here
 	_change_state(START)
 	_change_language(US)
-	$NinePatchRect/VBoxContainer/Start.connect("gui_input", self, "label_pressed");
-	$NinePatchRect/VBoxContainer/Credits.connect("gui_input", self, "label_pressed");
-	$NinePatchRect/VBoxContainer/Exit.connect("gui_input", self, "label_pressed");
+	$NinePatchRect/VBoxContainer/TextureRect/Start.connect("gui_input", self, "label_pressed");
+	$NinePatchRect/VBoxContainer/TextureRect2/Credits.connect("gui_input", self, "label_pressed");
+	$NinePatchRect/VBoxContainer/TextureRect3/Exit.connect("gui_input", self, "label_pressed");
 
 func _process(delta):
 	
@@ -55,12 +55,18 @@ func _change_language(new_lang):
 func chooseOpition():
 	match state:
 			START:
+				$AudioStreamPlayer.play()
+				yield($AudioStreamPlayer, "finished")
 				get_tree().change_scene(global.tutorial)
 				return
 			CREDITS:
+				$AudioStreamPlayer.play()
+				yield($AudioStreamPlayer, "finished")
 				get_tree().change_scene(global.credits)
 				return
 			EXIT:
+				$AudioStreamPlayer.play()
+				yield($AudioStreamPlayer, "finished")
 				get_tree().quit()
 
 func key_pressed():

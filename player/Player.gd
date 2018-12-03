@@ -76,11 +76,10 @@ func _input(event):
 		$PlayerTalking.stream = global.calling_door
 		$PlayerTalking.play()
 		yield($PlayerTalking, "finished")
-		if Input.is_action_just_pressed("Door"):
-			if get_node("../../Doors") != null:
-				for door in get_node("../../Doors").get_children():
-					if not door.opened:
-						door.get_node("AudioStreamPlayer2D").play()
+		if get_node("../../Doors") != null:
+			for door in get_node("../../Doors").get_children():
+				if not door.opened:
+					door.get_node("AudioStreamPlayer2D").play()
 #	if Input.is_action_just_pressed("pop_label"):
 #		$pop_label.pop("teste")
 #		print(position.distance_to(Vector2(0,0)))

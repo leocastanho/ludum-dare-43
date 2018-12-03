@@ -13,13 +13,13 @@ extents = Vector2( 19.3394, 13.3525 )
 [node name="AudioStreamPlayer2D" parent="." index="0"]
 
 stream = ExtResource( 2 )
-max_distance = 175.0
+max_distance = 225.0
 
 [node name="AnimatedSprite" parent="." index="2"]
 
 scale = Vector2( 0.15, 0.15 )
 animation = "Sheep"
-frame = 80
+frame = 33
 
 [node name="CollisionShape2D" parent="." index="3"]
 

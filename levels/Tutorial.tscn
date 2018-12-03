@@ -173,7 +173,7 @@ position = Vector2( 453.812, 327.91 )
 
 [node name="AnimatedSprite" parent="YSort/Sheeps/Sheeps" index="2"]
 
-frame = 29
+frame = 13
 
 [node name="Sheeps3" parent="YSort/Sheeps" index="1" instance=ExtResource( 7 )]
 

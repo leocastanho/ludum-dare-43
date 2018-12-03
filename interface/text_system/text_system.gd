@@ -127,6 +127,7 @@ func _on_CloseButtonFinal_pressed():
 			npc.global_position = get_node("../NPCPosition2").global_position
 			npc.get_node("AnimationPlayer").play("idle")
 			npc_count += 1
+			npc_sound = 3
 		elif npc_count == 1:
 			npc.get_node("AnimationPlayer").play("vanishing")
 			yield(npc.get_node("AnimationPlayer"), "animation_finished")
@@ -134,12 +135,14 @@ func _on_CloseButtonFinal_pressed():
 			npc.get_node("AnimationPlayer").play("idle")
 			npc.get_node("Light2D").visible = true
 			npc_count += 1
+			npc_sound = 3
 		elif npc_count == 2:
 			npc.get_node("AnimationPlayer").play("vanishing")
 			yield(npc.get_node("AnimationPlayer"), "animation_finished")
 			npc.global_position = get_node("../NPCPosition4").global_position
 			npc.get_node("AnimationPlayer").play("idle")
 			npc_count += 1
+			npc_sound = 3
 			global.player.get_node("BodyLight").visible = true
 			global.player.get_node("FeetLight").visible = true
 		elif npc_count == 3:
@@ -148,6 +151,7 @@ func _on_CloseButtonFinal_pressed():
 			npc.global_position = get_node("../NPCPosition5").global_position
 			npc.get_node("AnimationPlayer").play("idle")
 			npc_count += 1
+			npc_sound = 3
 #	if area_for_buttonB == "mind_area1":
 #		get_tree().change_scene(Global.level1)
 #		get_node("/root/PlayerInterface/Interface").visible = true
