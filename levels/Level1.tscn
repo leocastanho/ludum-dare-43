@@ -12,7 +12,7 @@
 [ext_resource path="res://levels/WaterArea.tscn" type="PackedScene" id=10]
 [ext_resource path="res://interface/PlayerInterface.tscn" type="PackedScene" id=11]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=1]
 
 resource_name = "toggle_light_off"
 length = 1.0
@@ -31,22 +31,22 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 290.294, 446.093 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
 extents = Vector2( 451.91, 264.173 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 183.251 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 27.2077 )
@@ -131,7 +131,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/toggle_light_off = SubResource( 6 )
+anims/toggle_light_off = SubResource( 1 )
 blend_times = [  ]
 
 [node name="Keys" type="Node2D" parent="." index="4"]
@@ -201,7 +201,7 @@ max_distance = 200.0
 
 [node name="AnimatedSprite" parent="YSort/Monsters/Monster3" index="2"]
 
-frame = 11
+frame = 1
 
 [node name="Monster4" parent="YSort/Monsters" index="3" instance=ExtResource( 7 )]
 
@@ -214,7 +214,7 @@ max_distance = 200.0
 
 [node name="AnimatedSprite" parent="YSort/Monsters/Monster4" index="2"]
 
-frame = 11
+frame = 1
 
 [node name="Monster5" parent="YSort/Monsters" index="4" instance=ExtResource( 7 )]
 
@@ -227,7 +227,7 @@ max_distance = 200.0
 
 [node name="AnimatedSprite" parent="YSort/Monsters/Monster5" index="2"]
 
-frame = 11
+frame = 1
 
 [node name="Monster6" parent="YSort/Monsters" index="5" instance=ExtResource( 7 )]
 
@@ -237,10 +237,6 @@ position = Vector2( 2895.22, 512.039 )
 [node name="AudioStreamPlayer2D" parent="YSort/Monsters/Monster6" index="0"]
 
 max_distance = 200.0
-
-[node name="AnimatedSprite" parent="YSort/Monsters/Monster6" index="2"]
-
-frame = 5
 
 [node name="Monster7" parent="YSort/Monsters" index="6" instance=ExtResource( 7 )]
 
@@ -283,7 +279,7 @@ position = Vector2( 1022.05, 618.773 )
 [node name="CollisionShape2D" parent="WaterArea" index="0"]
 
 position = Vector2( 5.98682, -53.886 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="WaterArea2" parent="." index="9" instance=ExtResource( 10 )]
 
@@ -293,7 +289,7 @@ position = Vector2( 2587.85, 249.675 )
 [node name="CollisionShape2D" parent="WaterArea2" index="0"]
 
 position = Vector2( 23.0791, 354.701 )
-shape = SubResource( 5 )
+shape = SubResource( 3 )
 
 [node name="Area2" type="Area2D" parent="." index="10"]
 
@@ -310,7 +306,7 @@ audio_bus_name = "Master"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2" index="0"]
 
 position = Vector2( 1.36035, 5.4415 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 
 [node name="Area3" type="Area2D" parent="." index="11"]
 
@@ -351,7 +347,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel" index="0"]
 
-shape = SubResource( 9 )
+shape = SubResource( 5 )
 
 [node name="PlayerInterface" parent="." index="15" instance=ExtResource( 11 )]
 

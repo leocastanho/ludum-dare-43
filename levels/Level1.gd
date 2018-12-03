@@ -5,6 +5,9 @@ var area_three_activated = false
 var area_four_activated = false
 onready var text_system = $text_system
 
+func _ready():
+	get_node("/root/MusicBG").stop()
+
 func restart():
 	global.player.death(true)
 	global.player_died = true
