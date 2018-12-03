@@ -5,21 +5,8 @@ const MAX_SPEED = 130
 const FRICTION = 0.15
 var motion = Vector2()
 
-
-#var disguise = 3
-#var max_diguise = 5
-#var normalPlayer = preload("res://GFX/PNG/Hitman 1/hitman1_stand.png")
-#var playerOnBox = preload("res://GFX/PNG/Tiles/tile_129.png")
-#var normalPlayerCollision = preload("res://Scenes/Characters/CharacterCollision.tres")
-#var playerOnBoxCollision = preload("res://Scenes/Characters/BoxCollision.tres")
-#var normalPlayerOccluder = preload("res://Scenes/Characters/CharacterOccluder.tres")
-#var playerOnBoxOccluder = preload("res://Scenes/Characters/BoxOccluder.tres")
-#var onThebox = false
 var playerMoving = false
-#var speedOnBox = 1
-#var maxSpeedOnBox = 50
 var velocityMultiplier = 1
-#var cooldownBox = false
 var stepsPlayng = false
 
 func _ready():
@@ -30,6 +17,8 @@ func _ready():
 		global.payer_spawn_position = position
 	else:
 		position = global.payer_spawn_position
+		for key in get_node("../../Keys").get_children():
+			key.reset_key()
 	global.player_died = false
 	OS.center_window()
 	global.player = self
@@ -51,7 +40,7 @@ func _physics_process(delta):
 #		$Torch.enabled = !$Torch.enabled
 
 func _input(event):
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("Monsters"):
 		$PlayerTalking.stream = global.calling_monsters
 		$PlayerTalking.play()
 		yield($PlayerTalking, "finished")

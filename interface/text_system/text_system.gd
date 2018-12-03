@@ -3,7 +3,7 @@ extends CanvasLayer
 var text_count = 0
 var text
 var buttons
-enum WICHAREA {STORY, TUTORIAL, LEVEL1, FINAL}
+enum WICHAREA {STORY, TUTORIAL, LEVEL1, LEVEL2, LEVEL3, FINAL}
 export(WICHAREA) var wich_area = WICHAREA.STORY
 var npc
 var npc_count = 0
@@ -26,7 +26,7 @@ func _ready():
 	elif global.language_on == global.PORTUGUESE:
 		$Popup/DialogueBox/NextButton/Label.text = buttons[1]["next"][0]
 	_on_NextButton_pressed()
-	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(1), "timeout")
 	pop_up_show()
 
 
@@ -58,6 +58,16 @@ func _on_NextButton_pressed():
 					wich_area(0, "loosing_normal")
 				else:
 					wich_area(0, "level1")
+			LEVEL2:
+				if global.player_died:
+					wich_area(0, "loosing_normal")
+				else:
+					wich_area(0, "level2")
+			LEVEL3:
+				if global.player_died:
+					wich_area(0, "loosing_normal")
+				else:
+					wich_area(0, "level3")
 			FINAL:
 				wich_area(0, "final")
 	elif global.language_on == global.PORTUGUESE:
@@ -78,7 +88,7 @@ func wich_area(language, area):
 			$Popup/DialogueBox/CloseButtonFinal.visible = true
 			$Popup/DialogueBox/NextButton.visible = false
 	if area == "tutorial":
-		if text_count == 7 or text_count == 10 or text_count == 11 or text_count == 13 or text_count == text[0]["tutorial"].size() - 1:
+		if text_count == 7 or text_count == 11 or text_count == 12 or text_count == 14 or text_count == text[0]["tutorial"].size() - 1:
 			$Popup/DialogueBox/CloseButtonFinal.visible = true
 			$Popup/DialogueBox/NextButton.visible = false
 	if area == "loosing_tutorial":
@@ -87,6 +97,14 @@ func wich_area(language, area):
 			$Popup/DialogueBox/TryAgain.visible = true
 	if area == "level1":
 		if text_count == 0 or text_count == 1 or text_count == text[0]["level1"].size() - 1:
+			$Popup/DialogueBox/CloseButtonFinal.visible = true
+			$Popup/DialogueBox/NextButton.visible = false
+	if area == "level2":
+		if text_count == 0 or text_count == text[0]["level2"].size() - 1:
+			$Popup/DialogueBox/CloseButtonFinal.visible = true
+			$Popup/DialogueBox/NextButton.visible = false
+	if area == "level3":
+		if text_count == 2 or text_count == text[0]["level3"].size() - 1:
 			$Popup/DialogueBox/CloseButtonFinal.visible = true
 			$Popup/DialogueBox/NextButton.visible = false
 	if area == "loosing_normal":

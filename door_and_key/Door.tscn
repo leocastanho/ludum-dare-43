@@ -13,7 +13,7 @@ extents = Vector2( 31.5982, 10 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 31.5982, 52.2627 )
+extents = Vector2( 31.5982, 23.5155 )
 
 [sub_resource type="Animation" id=3]
 
@@ -91,6 +91,7 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( -0.794434, 18.669 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]

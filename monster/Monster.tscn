@@ -71,7 +71,7 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "idle_warrior",
-"speed": 5.0
+"speed": 23.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
@@ -89,7 +89,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 16.7637, 13.5672 )
 
-[node name="Monster" type="Area2D" index="0"]
+[node name="Monster" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -146,13 +146,13 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 1 )
 animation = "idle_knight"
-frame = 10
+frame = 5
 playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( 0, 14.6196 )
+position = Vector2( -0.699299, 23.7455 )
 shape = SubResource( 2 )
 _sections_unfolded = [ "Transform" ]
 

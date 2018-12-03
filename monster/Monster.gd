@@ -13,4 +13,5 @@ func _on_Monster_body_entered(body):
 		get_node("../../..").restart()
 
 func _draw():
-	draw_circle(Vector2(0,0), $AudioStreamPlayer2D.max_distance, Color(1,1,1,0.3))
+	if global.show_sound_circle:
+		draw_circle(Vector2(0,0), $AudioStreamPlayer2D.max_distance - 70, Color(1,1,1,0.3))

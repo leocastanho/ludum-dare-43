@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://levels/Level1.gd" type="Script" id=1]
 [ext_resource path="res://tileset/FloorTiles.tres" type="TileSet" id=2]
@@ -7,10 +7,12 @@
 [ext_resource path="res://door_and_key/Key.tscn" type="PackedScene" id=5]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://monster/Monster.tscn" type="PackedScene" id=7]
-[ext_resource path="res://sfx/game_over_dark_bell_chime_01.wav" type="AudioStream" id=8]
-[ext_resource path="res://interface/text_system/text_system.tscn" type="PackedScene" id=9]
-[ext_resource path="res://levels/WaterArea.tscn" type="PackedScene" id=10]
-[ext_resource path="res://interface/PlayerInterface.tscn" type="PackedScene" id=11]
+[ext_resource path="res://monster/Warrior.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sfx/game_over_dark_bell_chime_01.wav" type="AudioStream" id=9]
+[ext_resource path="res://interface/text_system/text_system.tscn" type="PackedScene" id=10]
+[ext_resource path="res://levels/WaterArea.tscn" type="PackedScene" id=11]
+[ext_resource path="res://interface/PlayerInterface.tscn" type="PackedScene" id=12]
+[ext_resource path="res://tileset/paving_01_tile_256_11.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -51,7 +53,7 @@ extents = Vector2( 10, 183.251 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 27.2077 )
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -122,7 +124,7 @@ tile_data = PoolIntArray( 131072, 0, 262144, 131073, 0, 262146, 131074, 0, 26214
 [node name="CanvasModulate" type="CanvasModulate" parent="." index="3"]
 
 editor/display_folded = true
-color = Color( 1, 1, 1, 1 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate" index="0"]
 
@@ -180,8 +182,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
 [node name="Monsters" type="Node2D" parent="YSort" index="1"]
 
-editor/display_folded = true
-
 [node name="Monster" parent="YSort/Monsters" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 365.253, 850.279 )
@@ -203,20 +203,7 @@ max_distance = 200.0
 
 frame = 1
 
-[node name="Monster4" parent="YSort/Monsters" index="3" instance=ExtResource( 7 )]
-
-editor/display_folded = true
-position = Vector2( 2282.34, 396.388 )
-
-[node name="AudioStreamPlayer2D" parent="YSort/Monsters/Monster4" index="0"]
-
-max_distance = 200.0
-
-[node name="AnimatedSprite" parent="YSort/Monsters/Monster4" index="2"]
-
-frame = 1
-
-[node name="Monster5" parent="YSort/Monsters" index="4" instance=ExtResource( 7 )]
+[node name="Monster5" parent="YSort/Monsters" index="3" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 2604.68, 289.497 )
@@ -229,7 +216,7 @@ max_distance = 200.0
 
 frame = 1
 
-[node name="Monster6" parent="YSort/Monsters" index="5" instance=ExtResource( 7 )]
+[node name="Monster6" parent="YSort/Monsters" index="4" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 2895.22, 512.039 )
@@ -238,40 +225,51 @@ position = Vector2( 2895.22, 512.039 )
 
 max_distance = 200.0
 
-[node name="Monster7" parent="YSort/Monsters" index="6" instance=ExtResource( 7 )]
+[node name="AnimatedSprite" parent="YSort/Monsters/Monster6" index="2"]
+
+frame = 10
+
+[node name="Monster7" parent="YSort/Monsters" index="5" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 3198.72, 347.334 )
 
-[node name="Monster8" parent="YSort/Monsters" index="7" instance=ExtResource( 7 )]
+[node name="Monster8" parent="YSort/Monsters" index="6" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 3170.54, 720.388 )
 
-[node name="Monster9" parent="YSort/Monsters" index="8" instance=ExtResource( 7 )]
-
-editor/display_folded = true
-position = Vector2( 3506.81, 538.623 )
-
-[node name="Monster10" parent="YSort/Monsters" index="9" instance=ExtResource( 7 )]
+[node name="Monster10" parent="YSort/Monsters" index="7" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 3565.88, 313.688 )
 
+[node name="Warrior" parent="YSort/Monsters" index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 2283.12, 401.624 )
+
+[node name="Warrior2" parent="YSort/Monsters" index="9" instance=ExtResource( 8 )]
+
+position = Vector2( 2898.29, 510.303 )
+
+[node name="Warrior3" parent="YSort/Monsters" index="10" instance=ExtResource( 8 )]
+
+position = Vector2( 3413.92, 561.288 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 9 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="text_system" parent="." index="7" instance=ExtResource( 9 )]
+[node name="text_system" parent="." index="7" instance=ExtResource( 10 )]
 
 wich_area = 2
 
-[node name="WaterArea" parent="." index="8" instance=ExtResource( 10 )]
+[node name="WaterArea" parent="." index="8" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 1022.05, 618.773 )
@@ -281,7 +279,7 @@ position = Vector2( 1022.05, 618.773 )
 position = Vector2( 5.98682, -53.886 )
 shape = SubResource( 2 )
 
-[node name="WaterArea2" parent="." index="9" instance=ExtResource( 10 )]
+[node name="WaterArea2" parent="." index="9" instance=ExtResource( 11 )]
 
 editor/display_folded = true
 position = Vector2( 2587.85, 249.675 )
@@ -349,7 +347,34 @@ audio_bus_name = "Master"
 
 shape = SubResource( 5 )
 
-[node name="PlayerInterface" parent="." index="15" instance=ExtResource( 11 )]
+[node name="PlayerInterface" parent="." index="15" instance=ExtResource( 12 )]
+
+[node name="Light2D" type="Light2D" parent="." index="16"]
+
+visible = false
+position = Vector2( 254.955, 160.655 )
+scale = Vector2( 1.99024, 0.240683 )
+enabled = true
+editor_only = false
+texture = ExtResource( 13 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
 
 [connection signal="body_entered" from="Area2" to="." method="_on_Area2_body_entered"]
 
@@ -365,7 +390,6 @@ shape = SubResource( 5 )
 [editable path="Keys/Key2"]
 [editable path="Keys/Key3"]
 [editable path="YSort/Monsters/Monster3"]
-[editable path="YSort/Monsters/Monster4"]
 [editable path="YSort/Monsters/Monster5"]
 [editable path="YSort/Monsters/Monster6"]
 [editable path="WaterArea"]

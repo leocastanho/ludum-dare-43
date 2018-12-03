@@ -11,7 +11,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="PlayerInterface" type="CanvasLayer"]
+[node name="PlayerInterface" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -98,7 +98,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "\"Enter\" = monsters
+text = "\"T\" = monsters
 \"E\" = key
 \"R\" = door"
 align = 1
