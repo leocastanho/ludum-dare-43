@@ -35,4 +35,4 @@ func _on_FinalDialogue_body_entered(body):
 			text_system._on_NextButton_pressed()
 			text_system.pop_up_show()
 			final_dialogue = true
-			text_system.got_the_light = true	
+			text_system.got_the_light = true

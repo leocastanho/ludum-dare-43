@@ -31,7 +31,7 @@ var tutorial = "res://levels/Tutorial.tscn"
 var level1 = "res://levels/Level1.tscn"
 var level2 = "res://levels/Level2.tscn"
 var level3 = "res://levels/Level3.tscn"
-var fina = "res://levels/FinalLevel.tscn"
+var final = "res://levels/FinalLevel.tscn"
 
 #debug
 var show_sound_circle = false
