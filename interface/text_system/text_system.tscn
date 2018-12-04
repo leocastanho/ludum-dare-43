@@ -59,7 +59,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ) ]
 }
 
-[node name="text_system" type="CanvasLayer"]
+[node name="text_system" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )

@@ -2,7 +2,6 @@ extends Node2D
 
 var area_two_activated = false
 var area_three_activated = false
-var area_four_activated = false
 onready var text_system = $text_system
 
 func _ready():

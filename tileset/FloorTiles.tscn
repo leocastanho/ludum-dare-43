@@ -10,7 +10,7 @@
 [ext_resource path="res://tileset/pavig_01_tile_water_256_03.png" type="Texture" id=8]
 [ext_resource path="res://tileset/pavig_01_tile_water_256_04.png" type="Texture" id=9]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

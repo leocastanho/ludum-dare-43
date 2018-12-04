@@ -98,9 +98,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "\"T\" = monsters
-\"E\" = key
-\"R\" = door"
+text = "\"E\" = monsters
+\"R\" = key
+\"T\" = door"
 align = 1
 valign = 1
 percent_visible = 1.0

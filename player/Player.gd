@@ -33,34 +33,31 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite.flip_h = true
 
-#	$CooldownText.rect_rotation = - rotation_degrees
-#	$CooldownText.text = str($TimerBox.time_left).pad_decimals(2)
-#func _input(event):
-#	if Input.is_action_just_pressed("ui_accept"):
-#		$Torch.enabled = !$Torch.enabled
-
 func _input(event):
 	if Input.is_action_just_pressed("Monsters"):
 		$PlayerTalking.stream = global.calling_monsters
 		$PlayerTalking.play()
 		yield($PlayerTalking, "finished")
 		if get_tree().get_current_scene().name == "Tutorial":
-				for sheep in get_node("../Sheeps").get_children():
-						var distance_between = sheep.global_position.distance_to(global_position)
-						if distance_between <= 200:
-							sheep.play_song()
+			for sheep in get_node("..").get_children():
+				if sheep is Area2D:
+					var distance_between = sheep.global_position.distance_to(global_position)
+					if distance_between <= 200:
+						sheep.play_song()
 		else:
-			for monster in get_node("../Monsters").get_children():
-				var distance_between = monster.global_position.distance_to(global_position)
-				if distance_between <= 300:
-					monster.play_song()
+			for monster in get_node("..").get_children():
+				if monster is Area2D:
+					var distance_between = monster.global_position.distance_to(global_position)
+					if distance_between <= 300:
+						monster.play_song()
 	if Input.is_action_just_pressed("Key"):
 		$PlayerTalking.stream = global.calling_key
 		$PlayerTalking.play()
 		yield($PlayerTalking, "finished")
 		if get_node("../../Keys") != null:
 			for key in get_node("../../Keys").get_children():
-				key.get_node("AudioStreamPlayer2D").play()
+				if not key.keyPickedUp:
+					key.get_node("AudioStreamPlayer2D").play()
 	if Input.is_action_just_pressed("Door"):
 		$PlayerTalking.stream = global.calling_door
 		$PlayerTalking.play()
@@ -69,20 +66,6 @@ func _input(event):
 			for door in get_node("../../Doors").get_children():
 				if not door.opened:
 					door.get_node("AudioStreamPlayer2D").play()
-#	if Input.is_action_just_pressed("pop_label"):
-#		$pop_label.pop("teste")
-#		print(position.distance_to(Vector2(0,0)))
-	
-#	var diference = Vector2(100,100) - Vector2(0,0)
-
-
-#	if Input.is_action_just_pressed("Hide"):
-#		if not onThebox and not cooldownBox and disguise > 0:
-#			on_box()
-#		elif onThebox:
-#			not_on_box()
-#			$TimerBox.stop()
-#			$CooldownBox.start()
 
 func update_motion(delta):
 # Option 2: Jean-François movement with no priority. I like this one better, looks cleaner
@@ -115,9 +98,6 @@ func update_motion(delta):
 	if not velocity == Vector2(): #and not onThebox:
 		motion += velocity
 		motion = motion.clamped(MAX_SPEED)
-#	elif not velocity == Vector2() and onThebox:
-#		motion += velocity
-#		motion = motion.clamped(maxSpeedOnBox)
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION)
 		motion.y = lerp(motion.y, 0, FRICTION)

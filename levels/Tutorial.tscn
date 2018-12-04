@@ -162,84 +162,76 @@ max_distance = 800.0
 
 sort_enabled = true
 
-[node name="Sheeps" type="Node2D" parent="YSort" index="0"]
-
-[node name="Sheeps" parent="YSort/Sheeps" index="0" instance=ExtResource( 7 )]
+[node name="Sheeps2" parent="YSort" index="0" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 453.812, 327.91 )
 
-[node name="AnimatedSprite" parent="YSort/Sheeps/Sheeps" index="2"]
-
-frame = 37
-
-[node name="Sheeps3" parent="YSort/Sheeps" index="1" instance=ExtResource( 7 )]
+[node name="Sheeps3" parent="YSort" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 699.507, 401.769 )
 
-[node name="Sheeps2" parent="YSort/Sheeps" index="2" instance=ExtResource( 7 )]
+[node name="Sheeps4" parent="YSort" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 697.245, 217.822 )
 
-[node name="Sheeps4" parent="YSort/Sheeps" index="3" instance=ExtResource( 7 )]
+[node name="Sheeps5" parent="YSort" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 2324.33, 392.941 )
 
-[node name="Sheeps6" parent="YSort/Sheeps" index="4" instance=ExtResource( 7 )]
+[node name="Sheeps6" parent="YSort" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 2382.16, 235.741 )
 
-[node name="Sheeps9" parent="YSort/Sheeps" index="5" instance=ExtResource( 7 )]
+[node name="Sheeps9" parent="YSort" index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 2867.16, 540.172 )
 
-[node name="Sheeps10" parent="YSort/Sheeps" index="6" instance=ExtResource( 7 )]
+[node name="Sheeps10" parent="YSort" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 2867.16, 540.172 )
 
-[node name="Sheeps11" parent="YSort/Sheeps" index="7" instance=ExtResource( 7 )]
+[node name="Sheeps11" parent="YSort" index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 2943.03, 376.129 )
 
-[node name="Sheeps12" parent="YSort/Sheeps" index="8" instance=ExtResource( 7 )]
+[node name="Sheeps12" parent="YSort" index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 3096.82, 265.399 )
 
-[node name="Sheeps13" parent="YSort/Sheeps" index="9" instance=ExtResource( 7 )]
+[node name="Sheeps13" parent="YSort" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 3180, 460 )
 
-[node name="Sheeps15" parent="YSort/Sheeps" index="10" instance=ExtResource( 7 )]
+[node name="Sheeps15" parent="YSort" index="10" instance=ExtResource( 7 )]
 
 position = Vector2( 3383.9, 521.717 )
 
-[node name="Sheeps17" parent="YSort/Sheeps" index="11" instance=ExtResource( 7 )]
+[node name="Sheeps17" parent="YSort" index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 3591, 560.677 )
 
-[node name="Sheeps18" parent="YSort/Sheeps" index="12" instance=ExtResource( 7 )]
+[node name="Sheeps18" parent="YSort" index="12" instance=ExtResource( 7 )]
 
 position = Vector2( 3500, 350 )
 
-[node name="Sheeps20" parent="YSort/Sheeps" index="13" instance=ExtResource( 7 )]
+[node name="Sheeps20" parent="YSort" index="13" instance=ExtResource( 7 )]
 
 position = Vector2( 3630, 250 )
 
-[node name="Sheeps5" parent="YSort/Sheeps" index="14" instance=ExtResource( 7 )]
+[node name="Sheeps7" parent="YSort" index="14" instance=ExtResource( 7 )]
 
 position = Vector2( 2142.86, 302.05 )
 
-[node name="NPC" parent="YSort" index="1" instance=ExtResource( 8 )]
+[node name="NPC" parent="YSort" index="15" instance=ExtResource( 8 )]
 
 position = Vector2( 263, 260 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Player" parent="YSort" index="2" instance=ExtResource( 9 )]
+[node name="Player" parent="YSort" index="16" instance=ExtResource( 9 )]
 
 position = Vector2( 142, 330 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
-
-[node name="Monsters" type="Node2D" parent="YSort" index="3"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
 
@@ -390,5 +382,4 @@ shape = SubResource( 3 )
 [editable path="Keys/Key"]
 [editable path="Keys/Key2"]
 [editable path="Keys/Key3"]
-[editable path="YSort/Sheeps/Sheeps"]
 [editable path="WaterArea"]

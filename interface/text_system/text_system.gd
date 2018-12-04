@@ -8,9 +8,7 @@ export(WICHAREA) var wich_area = WICHAREA.STORY
 var npc
 var npc_count = 0
 var npc_sound = 3
-#var area_for_buttonB
-#var language_for_area2
-#var time_button_area2_pressed = 0
+var got_the_light = false
 
 func _ready():
 	global.player_died = false
@@ -88,7 +86,7 @@ func wich_area(language, area):
 			$Popup/DialogueBox/CloseButtonFinal.visible = true
 			$Popup/DialogueBox/NextButton.visible = false
 	if area == "tutorial":
-		if text_count == 7 or text_count == 11 or text_count == 12 or text_count == 14 or text_count == text[0]["tutorial"].size() - 1:
+		if text_count == 8 or text_count == 12 or text_count == 13 or text_count == 15 or text_count == text[0]["tutorial"].size() - 1:
 			$Popup/DialogueBox/CloseButtonFinal.visible = true
 			$Popup/DialogueBox/NextButton.visible = false
 	if area == "loosing_tutorial":
@@ -112,10 +110,10 @@ func wich_area(language, area):
 			$Popup/DialogueBox/NextButton.visible = false
 			$Popup/DialogueBox/TryAgain.visible = true
 	if area == "final":
-		if text_count == text[0]["final"].size() - 1:
+		if text_count == text[0]["level3"].size() - 1:
 			$Popup/DialogueBox/CloseButtonFinal.visible = true
 			$Popup/DialogueBox/NextButton.visible = false
-
+			
 func wich_area_button(language, optionA, optionB, closeA, closeB):
 	$Popup/DialogueBox/OptionA/Label.text = buttons[language][optionA][0]
 	$Popup/DialogueBox/OptionB/Label.text = buttons[language][optionB][0]
@@ -170,30 +168,11 @@ func _on_CloseButtonFinal_pressed():
 			npc.get_node("AnimationPlayer").play("idle")
 			npc_count += 1
 			npc_sound = 3
-#	if area_for_buttonB == "mind_area1":
-#		get_tree().change_scene(Global.level1)
-#		get_node("/root/PlayerInterface/Interface").visible = true
-#	if area_for_buttonB == "mind_area2":
-#		get_tree().change_scene(Global.level2)
-#		get_node("/root/PlayerInterface/Interface").visible = true
-#	if area_for_buttonB == "mind_area3":
-#		get_tree().change_scene(Global.level3)
-#		get_node("/root/PlayerInterface/Interface").visible = true
-#	if area_for_buttonB == "mind_area4":
-#		get_tree().change_scene(Global.level4)
-#		get_node("/root/PlayerInterface/Interface").visible = true
-#	if area_for_buttonB == "final_area":
-#		get_node("../Position2D/PortalFinalArea/CollisionShape2D").disabled = false
-#	if area_for_buttonB == "boss_area":
-#		get_node("..")._change_state(get_node("..").IDLE)
-#		get_node("..")._next_phase(get_node("..").EASY)
+	if get_tree().get_current_scene().name == "Level3" and got_the_light:
+		get_tree().change_scene(global.final)
+	if get_tree().get_current_scene().name == "FinalLevel":
+		get_tree().change_scene(global.main_menu)
 
-#func _on_DialogueTrigger_body_entered(body):
-#	if body == Global.Player:
-#		text_count = 0
-#		dialogue_part = NORMALDIALOGUE
-#		_on_NextButton_pressed()
-#		pop_up_show()
 
 func _on_TryAgain_pressed():
 	global.player.queue_free()

@@ -45,7 +45,7 @@ extents = Vector2( 10, 183.251 )
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 151.415, 27.2077 )
+extents = Vector2( 151.415, 49.8694 )
 
 [node name="Level2" type="Node2D"]
 
@@ -141,46 +141,44 @@ sort_enabled = true
 position = Vector2( 142, 330 )
 _sections_unfolded = [ "Material", "Transform", "Visibility" ]
 
-[node name="Monsters" type="Node2D" parent="YSort" index="1"]
-
-[node name="Monster" parent="YSort/Monsters" index="0" instance=ExtResource( 7 )]
+[node name="Monster" parent="YSort" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 365.253, 850.279 )
 
-[node name="Monster2" parent="YSort/Monsters" index="1" instance=ExtResource( 7 )]
+[node name="Monster2" parent="YSort" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 1026.44, 478.322 )
 
-[node name="Monster7" parent="YSort/Monsters" index="2" instance=ExtResource( 7 )]
+[node name="Monster7" parent="YSort" index="3" instance=ExtResource( 7 )]
 
 editor/display_folded = true
 position = Vector2( 385.758, 397.791 )
 
-[node name="Warrior" parent="YSort/Monsters" index="3" instance=ExtResource( 8 )]
+[node name="Warrior" parent="YSort" index="4" instance=ExtResource( 8 )]
 
 position = Vector2( 1312.26, 883.342 )
 
-[node name="Warrior2" parent="YSort/Monsters" index="4" instance=ExtResource( 8 )]
+[node name="Warrior2" parent="YSort" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( 953.413, 912.049 )
 
-[node name="Warrior3" parent="YSort/Monsters" index="5" instance=ExtResource( 8 )]
+[node name="Warrior3" parent="YSort" index="6" instance=ExtResource( 8 )]
 
 position = Vector2( 1394.28, 536.799 )
 
-[node name="Warrior4" parent="YSort/Monsters" index="6" instance=ExtResource( 8 )]
+[node name="Warrior4" parent="YSort" index="7" instance=ExtResource( 8 )]
 
 position = Vector2( 684.792, 645.478 )
 
-[node name="Warrior5" parent="YSort/Monsters" index="7" instance=ExtResource( 8 )]
+[node name="Warrior5" parent="YSort" index="8" instance=ExtResource( 8 )]
 
 position = Vector2( 692.994, 1059.69 )
 
-[node name="Warrior6" parent="YSort/Monsters" index="8" instance=ExtResource( 8 )]
+[node name="Warrior6" parent="YSort" index="9" instance=ExtResource( 8 )]
 
 position = Vector2( 1138.99, 1105.96 )
 
-[node name="Warrior7" parent="YSort/Monsters" index="9" instance=ExtResource( 8 )]
+[node name="Warrior7" parent="YSort" index="10" instance=ExtResource( 8 )]
 
 position = Vector2( 726.305, 267.627 )
 
@@ -249,7 +247,7 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextLevel" index="0"]
 
-position = Vector2( 12.39, 79.4585 )
+position = Vector2( 12.39, 68.5754 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="BeforeHole" to="." method="_on_BeforeHole_body_entered"]

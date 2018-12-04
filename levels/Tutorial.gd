@@ -18,7 +18,7 @@ func restart():
 
 func _on_TutorialPart2_body_entered(body):
 	if not tuto_part_two_activated and body == global.player:
-		text_system.text_count = 8
+		text_system.text_count = 9
 		global.player.get_node("AnimatedSprite").play("idle")
 		global.player.set_physics_process(false)
 		text_system._on_NextButton_pressed()
@@ -28,7 +28,7 @@ func _on_TutorialPart2_body_entered(body):
 func _on_TutorialPart3_body_entered(body):
 	if not tuto_part_three_activated and body == global.player:
 		$CanvasModulate/AnimationPlayer.play("toggle_light_off")
-		text_system.text_count = 12
+		text_system.text_count = 13
 		global.player.get_node("AnimatedSprite").play("idle")
 		global.player.set_physics_process(false)
 		text_system._on_NextButton_pressed()
@@ -39,7 +39,7 @@ func _on_TutorialPart3_body_entered(body):
 
 func _on_TutorialPart4_body_entered(body):
 	if not tuto_part_four_activated and body == global.player:
-		text_system.text_count = 13
+		text_system.text_count = 14
 		global.player.get_node("AnimatedSprite").play("idle")
 		global.player.set_physics_process(false)
 		text_system._on_NextButton_pressed()
@@ -49,7 +49,7 @@ func _on_TutorialPart4_body_entered(body):
 
 func _on_TutorialPart5_body_entered(body):
 	if not tuto_part_five_activated and body == global.player:
-		text_system.text_count = 15
+		text_system.text_count = 16
 		global.player.get_node("AnimatedSprite").play("idle")
 		global.player.set_physics_process(false)
 		text_system._on_NextButton_pressed()

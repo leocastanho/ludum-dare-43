@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 217.693, 529.418 )
 
-[node name="WaterArea" type="Area2D"]
+[node name="WaterArea" type="Area2D" index="0"]
 
 scale = Vector2( 0.2, 0.2 )
 input_pickable = true

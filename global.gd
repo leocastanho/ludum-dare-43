@@ -26,12 +26,12 @@ var hitting_ground = preload("res://player/voices/footstep_water_land_02.wav")
 
 #scenes paths
 var main_menu = "res://main_menu/MainMenu.tscn"
-var credits = "res://credits/Credits.tscn"
+var credits = "res://Credits/Credits.tscn"
 var tutorial = "res://levels/Tutorial.tscn"
 var level1 = "res://levels/Level1.tscn"
 var level2 = "res://levels/Level2.tscn"
 var level3 = "res://levels/Level3.tscn"
-var final_level = "res://levels/FinalLevel.tscn"
+var fina = "res://levels/FinalLevel.tscn"
 
 #debug
 var show_sound_circle = false

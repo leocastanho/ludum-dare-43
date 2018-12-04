@@ -1,40 +1,43 @@
 [ 
     {"story":[""],
         
-    "tutorial":["Brave warrior, if you want to save us from the dark sun, you will have to learn how to see without your eyes.",
-        "I will teach you how to see with your ears.",
-        "Every little thing has a nature sound. But not everyone can hear it, this is an acient technique that have been long forgotten.",
-        "To hear it you need know their language. The language of things.",
-        "Those sheeps ahead will represent the monsters that you are going to face during your journey. Even i don't know how to kill those monsters.",
-        "Use WASD to move through the dungeon.",
-        "To hear the sound of monsters, you must say 'kuons' (press T) and if there is any close to you, they will emmit a sound, then you can dodge them.",
-        "Go ahead and try it with the sheeps, make them talk while you get closer, but dont touch them!",
-        "Every dungeon has a locked door, to open that door you need to find the key in the dark, but no worries, you can hear the sound of the key as well.",
+    "tutorial":["Brave warrior, help me please! The dark god Orbor want me to sacrifice my sheeps! But i love them!",
+        "Then... I made a mistake... I sacrificed the sun instead! Now everything is dark and my sheeps dont have grass to eat =(",
+        "Please, enter Orbors lair and bring back the sun! There is no light there. You will have to learn how to see without your eyes. Luck for you, im a master on this!",
+        "I will teach you how to see with your ears. Every little thing has a nature sound.",
+        "But not everyone can hear it, this is an acient technique that have been long forgotten. To hear it you need know the language of things.",
+        "My well trained sheeps ahead will represent the monsters that you are going to face during your journey.",
+        "Even i don't know how to kill those monsters.",
+        "To hear the sound of monsters, you must say 'puranpuranpuran' (press E) and if there is any close to you, they will emmit a sound, then you can dodge them.",
+        "Go ahead and try it with the sheeps, make them talk while you get closer, but dont touch them! Use WASD to move.",
+        "The lairs security is tough! They have a lot of locked doors, to open that door you need to find the key in the dark, but no worries, you can hear the sound of the key as well.",
         "Always search for the key and the next door, those sounds will guide you. Remember",
-        "To hear the sound of the key you must say 'ieak' (press E) and it will emit a sound.",
-        "You must do the same for the door, say 'dualei' (press R) to hear the sound of the door.",
+        "To hear the sound of the key you must say 'uouhh' (press R) and it will emit a sound.",
+        "You must do the same for the door, say 'uouahh' (press T) to hear the sound of the door.",
         "Everytime you pass a door, your progress will be saved. Now lets try the real deal, no light! Good luck, heres a lighter to help you a little bit.",
         "Well done, i think now you understand how hard your quest will be. This was just a little taste. It will be much harder out there.",
         "Lets try one more time, this time, it will be a little bit harder. Good luck.",
-        "Okay, now i think you are ready. Go through that door, to enter in the dungeon.",
-        "From now one, there will be no more light. Good luck out there."],
+        "Okay, now i think you are ready. Go through that door, to enter in the lair.",
+        "From now on, there will be no more light. Good luck out there. And sorry about that T.T"],
     
     "loosing_tutorial":["If you can't even pass through a couple of sheeps, you are going to die out there! Try again!"],
 
-    "level1":["I cant see a thing... But i can do it. Lets go",
+    "level1":["I cant see a thing... But i can do it. Lets go.",
         "Okay, i passed the first area, dont panic. Keep calm.",
-        "One more door opened, why there are so many doors here?"],
+        "One more door opened, why there are so many doors here? Why that guy had to sacrifice the sun?"],
     
-    "level2":["I think im guetting close to the sun. I can feel it.",
-        "Ok, im doing fine, i just need to keep moving."],
+    "level2":["I think im getting close to the sun. I can feel it. PS: From now on, i hate sheeps!",
+        "Ok, im doing fine, i just need to keep moving....."],
 
     "level3":["Ahhhhhhhhhhhhhhhhhhhhh",
         "Oh my god, i didnt see that pit... Im all wet, lucky that it didnt turn of my lighter.",
-        "I hope that the sun is here somewhere!"],
+        "I hope that the sun is here somewhere!",
+        "Finally, i found it, its so bright... So beautiful! I just saved mankind! (and the sheeps food)"],
+        
+    "final":["Thanks hero, you saved us all! Now we all can feel the warm of the sun and more important, my sheeps can eat fresh grass!"],
 
-    "loosing_normal":["You are dead! Try again!"],
+    "loosing_normal":["You are dead! Try again!"]},
     
-    "final":["I think im guetting close to the sun. I can feel it."]},
 
 
     {"story":["I heard that there is a ancient word that you can say when you are close to them and they will die, maybe you will learn it on your journey."],
